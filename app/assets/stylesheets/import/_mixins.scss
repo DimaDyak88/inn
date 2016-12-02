@@ -1,0 +1,21 @@
+@mixin disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+@mixin trigger-decoration($color, $style: dotted) {
+  color: $color;
+  border-bottom: 1px $style $color;
+  &:hover { border-bottom: 0; }
+}
+
+
+@mixin font-set($font-size, $line-height: false, $font-weight: false) {
+  font-size: $font-size;
+  @if is-set($line-height) {
+    line-height: $line-height;
+  }
+  @if is-set($font-weight) {
+    font-weight: $font-weight;
+  }
+}

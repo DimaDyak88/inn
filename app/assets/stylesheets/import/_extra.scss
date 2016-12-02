@@ -1,0 +1,94 @@
+@function is-set($v) {
+  @return $v != none and $v != false;
+}
+
+// borrowed from https://github.com/thoughtbot/neat
+@function is-not($value) {
+  @return if($value, false, true);
+}
+
+@mixin before($display: block, $content: '') {
+  &:before {
+    display: $display;
+    content: $content;
+    @content;
+  }
+}
+
+@mixin after($display: block, $content: '') {
+  &:after {
+    display: $display;
+    content: $content;
+    @content;
+  }
+}
+
+@mixin both($display: block, $content: '') {
+  &:before,
+  &:after {
+    display: $display;
+    content: $content;
+    @content;
+  }
+}
+
+// Adapted from: [A new micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
+// Known support: Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+
+@mixin clearfix($clear: both) {
+  @include both(table, ' ');
+  &:after {
+    clear: $clear;
+  }
+}
+
+// scss-lint:disable SpaceAfterPropertyColon
+@mixin absolute($top: false, $right: false, $bottom: false, $left: false) {
+  @if length($top) == 4 {
+    $left   : nth($top, 4);
+    $bottom : nth($top, 3);
+    $right  : nth($top, 2);
+    $top    : nth($top, 1);
+  }
+  position: absolute;
+  @if is-set($top)    { top:     $top; }
+  @if is-set($right)  { right:   $right; }
+  @if is-set($bottom) { bottom:  $bottom; }
+  @if is-set($left)   { left:    $left; }
+}
+
+//    example:
+//      @include ellipsis;
+//    produce:
+//      text-overflow: ellipsis;
+//      max-width: 100%;
+//      overflow: hidden;           // need to work text-overflow
+//      white-space: nowrap;        // need to work text-overflow
+@mixin ellipsis($max-width: 100%, $overflow: hidden, $nowrap: true) {
+  text-overflow: ellipsis;
+  @if is-set($overflow) {
+    overflow: $overflow;
+  }
+  @if $nowrap {
+    white-space: nowrap;
+  }
+  @if is-set($max-width) {
+    max-width: $max-width;
+  }
+}
+
+
+@mixin media($query) {
+  $media-query: 'screen';
+  $tick: false;
+  @each $q in $query {
+    $tick: is-not($tick);
+    @if $tick {
+      $media-query: $media-query + " and (#{$q}:";
+    } @else {
+      $media-query: $media-query + " #{$q})";
+    }
+  }
+  @media #{$media-query} {
+    @content;
+  }
+}

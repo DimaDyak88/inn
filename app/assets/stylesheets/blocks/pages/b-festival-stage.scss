@@ -1,0 +1,78 @@
+@import "import/base";
+
+.b-festival-stage {
+  padding-top: 61.5%;
+  margin-left: -$sidebar-width;
+  background: image_url('b-welcome/stage_works.jpg') no-repeat center / cover;
+
+  &:after {
+    z-index: 1;
+    content: '';
+    @include absolute(0 0 0 0);
+    background: rgba(#000, .35);
+  }
+
+
+  .l-page__content {
+    z-index: 2;
+    @include absolute(0 0 0 0);
+  }
+
+  .action-section {
+    z-index: 3;
+    @include absolute(false 0 45px 0);
+    margin: auto;
+    text-align: center;
+
+    .info {
+      margin-top: 20px;
+      @include font-set(16px, 21px, $play-italic);
+      font-family: $play-font;
+      font-style: italic;
+    }
+  }
+
+  &.video {
+    .action-section {
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+
+
+
+.b-name {
+  @include absolute(35px false false 50px);
+  width: 373px;
+  @include font-set(38px, 51px, $play-italic);
+  font-style: italic;
+  font-family: $play-font;
+
+  > bold {
+    font-weight: $play-italic-black;
+  }
+}
+
+.b-place {
+  @include absolute(35px 48px false false);
+
+  .year {
+    margin-bottom: -10px;
+    @include font-set(70px, 83px, $rubik-light);
+    letter-spacing: 1px;
+  }
+
+  .date {
+    @include  font-set(30px, 36px, $rubik-regular);
+  }
+
+  .city {
+    @include font-set(24px, 32px, $play-italic-bold);
+    font-family: $play-font;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+}

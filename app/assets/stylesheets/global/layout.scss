@@ -1,0 +1,126 @@
+@import 'import/base';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  //min-height: 100%;
+  //-webkit-font-smoothing: subpixel-antialiased;
+  //font-smoothing: subpixel-antialiased;
+
+  //display: flex;
+  //flex-direction: column;
+
+  font-size: 14px;
+  line-height: 22px;
+  font-family: 'Rubik', sans-serif;
+
+  cursor: default;
+  background: #1A1A1A;
+  color: #fff;
+}
+
+
+.l-page {
+  min-height: 100%;
+  //flex: 1 0 0;
+  //display: flex;
+  //flex-direction: column;
+  //max-width: 1280px;
+  //min-width: 1024px;
+
+  &__content{
+    //flex: 1 0 0;
+    //display: flex;
+    //flex-direction: column;
+
+    margin-left: $sidebar-width;
+  }
+}
+
+
+
+//@include font-roboto($light "#{$light}italic" $regular "#{$regular}italic" $bold "#{$bold}italic");
+//
+//@include font-face($font-name_serif, 'bodoni');
+
+//html {
+//  font: #{$light} #{$font-size_base}/#{$line-height_base} $font-family_base;
+//}
+
+//body {
+//  margin: 0;
+//  padding: 0;
+//  min-width: $desktop-width + $page-padding * 2;
+//
+//  @include media($tablet) {
+//    min-width: $tablet-width + $page-padding * 2;
+//  }
+//
+//  @include media($mobile) {
+//    min-width: $mobile-full-width;
+//  }
+//
+//  min-height: 100%;
+//  background: $c-body;
+//  color: $c-base;
+//  cursor: default;
+//  -webkit-font-smoothing: subpixel-antialiased;
+//  font-smoothing: subpixel-antialiased;
+//  @include display(flex);
+//  @include flex-direction(column);
+//}
+
+//.l-page {
+//  @include flex(1 0 0);
+//  @include display(flex);
+//  @include flex-direction(column);
+//  &.with-fixed-popup {
+//    height: 100%;
+//    overflow: hidden;
+//  }
+//}
+
+//.l-page__content {
+//  @include flex(1 0 auto);
+//  padding-bottom: 70px;
+//  &.expeditor { padding-top: 70px; }
+//
+//  @include media($mobile) {
+//    padding-bottom: 60px;
+//  }
+//}
+
+
+//.l-center {
+//  margin: 0 auto;
+//  padding: 0 $page-padding;
+//  box-sizing: content-box;
+//  width: $desktop-width;
+//
+//  @include media($tablet) {
+//    width: $tablet-width;
+//  }
+//
+//  @include media($tablet-only) {
+//    &.tablet-wide {
+//      padding: 0 $page-padding + $tablet-wide-margin;
+//      width: $tablet-width - $tablet-wide-margin * 2;
+//    }
+//  }
+//
+//  @include media($mobile) {
+//    width: auto;
+//  }
+//}
+//
+//.l-mobile-center {
+//  @include media($mobile) {
+//    width: $mobile-width;
+//    margin: 0 auto;
+//  }
+//}

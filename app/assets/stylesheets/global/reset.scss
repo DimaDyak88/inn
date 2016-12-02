@@ -1,0 +1,110 @@
+@import 'import/base';
+
+html { // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+div { position: relative; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+p {
+  //margin: $line-height_base 0;
+  padding: 0;
+  cursor: text;
+}
+
+strong {
+  //font-weight: $bold;
+}
+
+span {
+  cursor: default;
+}
+
+a {
+  //color: $c-base;
+  outline: none;
+  text-decoration: none;
+  span {
+    cursor: pointer;
+  }
+  &:hover {
+    //color: $c-brand;
+    text-decoration: none;
+  }
+  &.dashed {
+    //border-bottom: 1px dashed $c-base;
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+}
+
+img {
+  border: 0;
+  outline: 0;
+  vertical-align: bottom;
+  //color: $c-body;
+}
+
+ul,
+ol {
+  margin: 12px 0 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+}
+
+ol > li {
+  margin: 12px 0 0;
+}
+
+table {
+  border-spacing: 0;
+
+  tr {
+    > th,
+    > td {
+      padding: 0;
+      vertical-align: top;
+    }
+
+    > th {
+      font-weight: normal;
+    }
+  }
+}

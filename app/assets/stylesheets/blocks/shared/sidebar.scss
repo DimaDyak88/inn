@@ -1,0 +1,46 @@
+@import "import/base";
+
+.b-sidebar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $sidebar-width;
+
+  padding-top: $sidebar-indent;
+
+  background: image_url('b-sidebar/sidebar_bg.png') no-repeat 0 0 / cover;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 $sidebar-indent 40px;
+
+
+    .logo { margin-left: -5px; }
+
+    .lang-switcher {
+      display: flex;
+
+      &__item {
+        padding: 4px 8px 2px;
+        @include font-set(12px, 14px, $rubik-regular);
+        font-family: $rubik-font;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .active { background: #5C030D; }
+    }
+  }
+
+  > .socials {
+    @include absolute(false false $sidebar-indent $sidebar-indent);
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

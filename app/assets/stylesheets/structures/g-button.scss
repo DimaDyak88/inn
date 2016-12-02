@@ -1,0 +1,18 @@
+@import "import/base";
+
+.g-button {
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  outline: none;
+  text-decoration: none;
+
+  &_bordered {
+    padding: 18px 25px 15px;
+    border: 4px solid #B70618;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    @include font-set(20px, 27px, $rubik-bold);
+    color: #fff;
+  }
+}
