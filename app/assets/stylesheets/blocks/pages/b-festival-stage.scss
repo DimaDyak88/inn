@@ -1,9 +1,14 @@
 @import "import/base";
 
 .b-festival-stage {
-  padding-top: 61.5%;
-  margin-left: -$sidebar-width;
+  //padding-top: 61.5%;
+  height: 100vh;
   background: image_url('b-welcome/stage_works.jpg') no-repeat center / cover;
+
+  @media screen and (max-width: 900px) {
+    height: auto;
+    padding-top: 60%;
+  }
 
   &:after {
     z-index: 1;
@@ -12,18 +17,22 @@
     background: rgba(#000, .35);
   }
 
-
-  .l-page__content {
+  .container {
     z-index: 2;
     @include absolute(0 0 0 0);
   }
 
   .action-section {
     z-index: 3;
-    @include absolute(false 0 45px 0);
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: auto;
     text-align: center;
+  }
 
+  .send-work {
+    bottom: 45px;
     .info {
       margin-top: 20px;
       @include font-set(16px, 21px, $play-italic);
@@ -32,15 +41,73 @@
     }
   }
 
-  &.video {
-    .action-section {
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
+  .report-video {
+    top: 50%;
+    transform: translateY(-50%);
+    .play-video {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      background: asset_data_url('icons/play.svg') no-repeat center;
+      background-size: 70px;
+      cursor: pointer;
+    }
+
+    .info {
+      margin-top: 10px;
+      @include font-set(20px, 27px, $rubik-bold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  &.show-now {
+    height: auto;
+    min-height: 460px;
+
+    &:after { background: rgba(#000, .6); }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 }
 
+
+.b-schedule {
+  margin: 0 0 40px 100px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    .time {
+      position: absolute;
+      right: 100%;
+      top: 2px;
+      padding-right: 10px;
+      font-style: italic;
+      font-family: $play-font;
+      @include font-set(14px, 16px, $play-italic-black);
+    }
+
+    .name {
+      @include font-set(15px, 22px, $rubik-light);
+    }
+
+    .place {
+      margin-left: 14px;
+      @include font-set(13px, 16px, $rubik-light);
+      color: rgba(#fff, .7);
+    }
+  }
+
+  .g-button { margin-top: 5px; }
+}
 
 
 
@@ -51,16 +118,16 @@
   font-style: italic;
   font-family: $play-font;
 
-  > bold {
-    font-weight: $play-italic-black;
-  }
+  > b { font-weight: $play-italic-black; }
+
+  .show-now & { left: 100px; }
 }
 
 .b-place {
   @include absolute(35px 48px false false);
 
   .year {
-    margin-bottom: -10px;
+    margin-bottom: -8px;
     @include font-set(70px, 83px, $rubik-light);
     letter-spacing: 1px;
   }
