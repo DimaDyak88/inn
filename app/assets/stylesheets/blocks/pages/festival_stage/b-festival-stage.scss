@@ -48,7 +48,7 @@
       display: inline-block;
       width: 70px;
       height: 70px;
-      background: asset_data_url('icons/play.svg') no-repeat center;
+      background: asset_data_url('icons/stage_play.svg') no-repeat center;
       background-size: 70px;
       cursor: pointer;
     }
@@ -72,74 +72,5 @@
       flex-direction: column;
       justify-content: flex-end;
     }
-  }
-}
-
-
-.b-schedule {
-  margin: 0 0 40px 100px;
-
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 15px;
-
-    .time {
-      position: absolute;
-      right: 100%;
-      top: 2px;
-      padding-right: 10px;
-      font-style: italic;
-      font-family: $play-font;
-      @include font-set(14px, 16px, $play-italic-black);
-    }
-
-    .name {
-      @include font-set(15px, 22px, $rubik-light);
-    }
-
-    .place {
-      margin-left: 14px;
-      @include font-set(13px, 16px, $rubik-light);
-      color: rgba(#fff, .7);
-    }
-  }
-
-  .g-button { margin-top: 5px; }
-}
-
-
-
-.b-name {
-  @include absolute(35px false false 50px);
-  width: 373px;
-  @include font-set(38px, 51px, $play-italic);
-  font-style: italic;
-  font-family: $play-font;
-
-  > b { font-weight: $play-italic-black; }
-
-  .show-now & { left: 100px; }
-}
-
-.b-place {
-  @include absolute(35px 48px false false);
-
-  .year {
-    margin-bottom: -8px;
-    @include font-set(70px, 83px, $rubik-light);
-    letter-spacing: 1px;
-  }
-
-  .date {
-    @include  font-set(30px, 36px, $rubik-regular);
-  }
-
-  .city {
-    @include font-set(24px, 32px, $play-italic-bold);
-    font-family: $play-font;
-    font-style: italic;
-    letter-spacing: 1px;
   }
 }

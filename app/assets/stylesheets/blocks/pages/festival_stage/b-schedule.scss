@@ -1,0 +1,34 @@
+@import "import/base";
+
+.b-schedule {
+  margin: 0 0 40px 100px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    .time {
+      position: absolute;
+      right: 100%;
+      top: 2px;
+      padding-right: 10px;
+      font-style: italic;
+      font-family: $play-font;
+      @include font-set(14px, 16px, $play-italic-black);
+    }
+
+    .name {
+      @include font-set(15px, 22px, $rubik-light);
+    }
+
+    .place {
+      margin-left: 14px;
+      @include font-set(13px, 16px, $rubik-light);
+      color: rgba(#fff, .7);
+    }
+  }
+
+  .g-button { margin-top: 5px; }
+}

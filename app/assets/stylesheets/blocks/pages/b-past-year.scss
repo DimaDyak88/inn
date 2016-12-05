@@ -2,12 +2,15 @@
 
 .b-past-year {
 
+  .headline { margin: 80px auto 35px; }
+
   &__media {
     display: flex;
 
     &-section {
       flex: 1 0 50%;
-      padding-top: 35%;
+      //padding-top: 35%;
+      padding-top: 28vw;
 
       .content {
         @include absolute(0 0 40px 0);
@@ -27,6 +30,15 @@
       &.videos {
         .content {
           background: image_url('fakes/fake.jpg') no-repeat center / cover;
+        }
+
+        .play-button {
+          width: 50px;
+          height: 37px;
+          @include absolute(0 0 0 0);
+          margin: auto;
+          background: asset_data_url('icons/video_play.svg') no-repeat center / cover;
+          cursor: pointer;
         }
 
         .all-materials {
@@ -80,7 +92,7 @@
         }
 
         .all-materials {
-          background: #B70618;
+          background: $c-red;
         }
       }
     }

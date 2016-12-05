@@ -1,0 +1,27 @@
+@import "import/base";
+
+.b-footer {
+  margin: 0 50px;
+  padding: 20px 0 40px;
+  border-top: 1px solid rgba(#D8D8D8, .4);
+
+  @include font-set(16px, 19px, $rubik-light);
+
+  .years {
+    margin: 7px 0 0 15px;
+    font-size: 13px;
+    line-height: 15px;
+    opacity: .5;
+  }
+
+  &.secondary {
+    padding-bottom: 30px;
+
+    .copyrights,
+    .years {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-top: 0;
+    }
+  }
+}

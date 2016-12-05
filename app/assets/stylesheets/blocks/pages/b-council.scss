@@ -1,0 +1,49 @@
+@import "import/base";
+
+.b-council {
+  padding-top: 45px;
+  padding-bottom: 80px;
+
+  background: #fff;
+  color: #000;
+
+  .headline {
+    margin-bottom: 40px;
+    line-height: 51px;
+    @include both { top: 28px; }
+  }
+
+  &__persons {
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  &__person {
+    flex: 0 0 25%;
+    color: #000;
+
+    > .image {
+      overflow: hidden;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: image_url('fakes/person1.jpg') no-repeat center / cover;
+    }
+
+    > .name {
+      width: 70%;
+      margin: 12px 0 0 10px;
+      font-family: $play-font;
+      @include font-set(20px, 27px, $play-italic-bold);
+      font-style: italic;
+    }
+
+    >.info {
+      margin: 8px 0 0 10px;
+      padding-right: 60px;
+      @include font-set(14px, 20px, $rubik-light);
+    }
+  }
+}

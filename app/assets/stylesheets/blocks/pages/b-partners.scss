@@ -1,0 +1,34 @@
+@import "import/base";
+
+.b-partners {
+  .headline {
+    margin-top: 75px;
+    margin-bottom: 40px;
+  }
+
+  .info-partners-title {
+    margin-bottom: 42px;
+    text-align: center;
+    font-family: $play-font;
+    @include font-set(20px, 27px, $play-italic-bold);
+    font-style: italic;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+
+    > img {
+      margin: 0 25px;
+    }
+
+    &.info-partners {
+      > img {
+        margin: 0 30px;
+      }
+    }
+  }
+}

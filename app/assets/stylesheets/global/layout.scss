@@ -44,8 +44,8 @@ body {
 
 .headline {
   display: table;
-  margin: 75px auto 35px;
-  @include font-set(38px, false, $play-italic);
+  margin: auto;
+  @include font-set(38px, 51px, $play-italic);
   font-family: $play-font;
   font-style: italic;
   text-align: center;
@@ -56,21 +56,27 @@ body {
 
   @include both {
     position: absolute;
-    top: 14px;
+    top: 28px;
     width: 50px;
     height: 1px;
-    background: #B70618;
+    background: $c-red;
   }
 
   &:before { left: -80px; }
   &:after { right: -80px; }
 
-  > span {
-    display: inline-block;
-    margin-top: 15px;
+  > div {
     font-style: normal;
     @include font-set(14px, 17px, $rubik-light);
     font-family: $rubik-font;
+  }
+
+  &.secondary {
+    color: $c-red;
+
+    @include both {
+      background: #000;
+    }
   }
 }
 

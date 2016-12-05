@@ -1,0 +1,53 @@
+@import "import/base";
+
+.b-about-festival {
+  padding: 45px 60px 30px;
+  background: #fff;
+  color: #000;
+
+  .headline { margin-bottom: 40px; }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about {
+    width: 73%;
+    @include font-set(24px, 32px, $rubik-light);
+  }
+
+  .reglament {
+    display: flex;
+    align-items: center;
+    width: 174px;
+    height: 60px;
+    margin-top: 12px;
+    padding: 0 20px;
+    background: $c-red;
+    box-shadow: 0 10px 20px rgba(#EB4353, .4);
+
+    > .icon {
+      flex: 1 0 27px;
+      height: 30px;
+      margin-right: 20px;
+      background: asset_data_url('icons/reglament_download.svg') no-repeat center / cover;
+    }
+
+    > span {
+      @include font-set(16px, 19px, $rubik-regular);
+      color: #fff;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .description {
+    width: 70%;
+    margin: 40px 35px 0 0;
+    @include font-set(15px, 22px, $rubik-light);
+  }
+}
