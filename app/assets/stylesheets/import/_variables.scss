@@ -13,9 +13,18 @@ $play-italic-black: 900;
 $c-red: #B70618;
 
 $max-width: 1280px;
-
 $sidebar-width: 256px;
-$sidebar-indent: 30px
+$sidebar-indent: 30px;
+
+
+$design-width: 1280px;
+
+$tablet-width: 895px;
+$scroll-width: 17px;
+
+$tablet: max-width $tablet-width + $scroll-width;
+$mobile: 500px;
+
 
 //$font-name_base: Roboto;
 //$font-family_base: $font-name_base, "Trebuchet MS", Arial, Tahoma, sans-serif;

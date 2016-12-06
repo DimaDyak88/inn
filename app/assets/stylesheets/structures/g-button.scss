@@ -1,26 +1,37 @@
-@import "import/base";
-
 .g-button {
   display: inline-block;
   vertical-align: top;
   border: none;
   outline: none;
   text-decoration: none;
-  letter-spacing: 1.5px;
-  @include font-set(20px, 27px, $rubik-bold);
+  letter-spacing: vw(1.5px);
+  @include font-set(vw(20px), vw(27px), $rubik-bold);
+
+  @include media($tablet) {
+    font-size: 18px;
+    letter-spacing: 1.35px;
+  }
 
   &.bordered {
-    padding: 18px 25px 15px;
-    border: 4px solid $c-red;
+    padding: vw(18px) vw(25px) vw(15px);
+    border: vw(4px) solid $c-red;
     text-transform: uppercase;
     color: #fff;
+
+    @include media($tablet) {
+      padding: 11px 20px 8px;
+    }
   }
 
   &.small {
-    padding: 6px 9px 4px;
+    padding: vw(6px) vw(9px) vw(4px);
+    border-width: vw(2px);
+    @include font-set(vw(14px), vw(21px), $rubik-bold);
+    letter-spacing: vw(1px);
 
-    border-width: 2px;
-    @include font-set(14px, 21px, $rubik-bold);
-    letter-spacing: 1px;
+    @include media($tablet) {
+      padding: 5px 9px 3px;
+      font-size: 12px;
+    }
   }
 }

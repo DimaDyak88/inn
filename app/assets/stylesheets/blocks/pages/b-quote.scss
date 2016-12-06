@@ -1,8 +1,7 @@
-@import "import/base";
-
 .b-quote {
-  padding: 55px 100px 50px 90px;
+  padding: vw(45px) vw(100px) vw(50px) vw(90px);
   background: image_url('b-quote/quote_bg.jpg') no-repeat center / cover;
+  background-attachment: fixed;
 
   .headline {
     @include both {
@@ -15,41 +14,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: vw(80px);
 
     .name {
       font-family: $play-font;
-      @include font-set(24px, 32px, $play-italic-black);
+      @include font-set(vw(24px), vw(32px), $play-italic-black);
       font-style: italic;
     }
 
     .photo {
-      flex: 0 0 206px;
-      height: 206px;
-      margin: 0 58px;
-      border: 6px solid #fff;
+      flex: 0 0 vw(206px);
+      height: vw(206px);
+      margin: 0 vw(58px);
+      border: vw(6px) solid #fff;
       background: image_url('fakes/quote_author.jpg') no-repeat center / cover;
       border-radius: 50%;
     }
 
     .message {
-      @include font-set(24px, 35px, $rubik-light);
+      @include font-set(vw(24px), vw(35px), $rubik-light);
     }
   }
 
   .load-more {
     display: table;
-    margin: 95px auto 0;
-    padding-left: 40px;
-    padding-right: 12px;
-    cursor: pointer;
+    margin: vw(95px) auto 0;
+    padding-left: vw(40px);
+    padding-right: vw(12px);
 
     @include before {
       position: absolute;
-      left: 9px;
-      top: 6px;
-      width: 19px;
-      height: 19px;
+      left: vw(9px);
+      top: vw(6px);
+      width: vw(19px);
+      height: vw(19px);
       background: asset_data_url('icons/load_more.svg') no-repeat center / cover;
     }
   }

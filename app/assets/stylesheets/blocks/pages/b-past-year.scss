@@ -1,30 +1,42 @@
-@import "import/base";
-
 .b-past-year {
+  .headline {
+    margin: vw(75px) auto vw(35px);
 
-  .headline { margin: 80px auto 35px; }
+    @include media($tablet) {
+      margin: 50px auto 30px;
+    }
+  }
 
   &__media {
     display: flex;
 
     &-section {
       flex: 1 0 50%;
-      //padding-top: 35%;
       padding-top: 28vw;
 
       .content {
-        @include absolute(0 0 40px 0);
+        @include absolute(0 0 vw(40px) 0);
         position: absolute;
+
+        @include media($tablet) {
+          bottom: 30px;
+        }
       }
 
       .all-materials {
         z-index: 2;
         @include absolute(false 0 0 0);
-        height: 40px;
-        padding-left: 20px;
-        @include font-set(13px, 40px, $rubik-regular);
+        height: vw(40px);
+        padding-left: vw(20px);
+        @include font-set(vw(13px), vw(40px), $rubik-regular);
         text-transform: uppercase;
         color: #fff;
+
+        @include media($tablet) {
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+        }
       }
 
       &.videos {
@@ -33,8 +45,8 @@
         }
 
         .play-button {
-          width: 50px;
-          height: 37px;
+          width: vw(50px);
+          height: vw(37px);
           @include absolute(0 0 0 0);
           margin: auto;
           background: asset_data_url('icons/video_play.svg') no-repeat center / cover;

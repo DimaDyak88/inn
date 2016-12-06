@@ -1,34 +1,65 @@
-@import "import/base";
-
 .b-name {
-  @include absolute(35px false false 50px);
-  width: 373px;
-  @include font-set(38px, 51px, $play-italic);
+  @include absolute(vw(35px) false false vw(50px));
+  width: vw(373px);
+  @include font-set(vw(38px), vw(51px), $play-italic);
   font-style: italic;
   font-family: $play-font;
 
   > b { font-weight: $play-italic-black; }
 
-  .show-now & { left: 100px; }
+  .show-now & {
+    left: vw(100px);
+
+    @include media($tablet) { left: 125px; }
+  }
+
+  @include media($tablet) {
+    left: 125px;
+    top: 22px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
+
+
 .b-place {
-  @include absolute(35px 48px false false);
+  @include absolute(vw(35px) vw(48px) false false);
+
+  @include media($tablet) {
+    top: 22px;
+    right: 32px;
+  }
 
   .year {
-    margin-bottom: -8px;
-    @include font-set(70px, 83px, $rubik-light);
-    letter-spacing: 1px;
+    margin-bottom: vw(-8px);
+    @include font-set(vw(70px), vw(83px), $rubik-light);
+    letter-spacing: vw(1px);
+
+    @include media($tablet) {
+      font-size: 56px;
+      line-height: 66px;
+    }
   }
 
   .date {
-    @include  font-set(30px, 36px, $rubik-regular);
+    @include  font-set(vw(30px), vw(36px), $rubik-regular);
+    
+    @include media($tablet) {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   .city {
-    @include font-set(24px, 32px, $play-italic-bold);
+    @include font-set(vw(24px), vw(32px), $play-italic-bold);
     font-family: $play-font;
     font-style: italic;
-    letter-spacing: 1px;
+    letter-spacing: vw(1px);
+
+    @include media($tablet) {
+      font-size: 20px;
+      line-height: 27px;
+    }
   }
 }

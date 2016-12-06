@@ -1,16 +1,15 @@
-@import "import/base";
-
 .b-partners {
+  padding-top: 75px;
+
   .headline {
-    margin-top: 75px;
-    margin-bottom: 40px;
+    margin-bottom: vw(40px);
   }
 
   .info-partners-title {
-    margin-bottom: 42px;
+    margin-bottom: vw(42px);
     text-align: center;
     font-family: $play-font;
-    @include font-set(20px, 27px, $play-italic-bold);
+    @include font-set(vw(20px), vw(27px), $play-italic-bold);
     font-style: italic;
   }
 
@@ -19,15 +18,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 75px;
+    margin-bottom: vw(75px);
 
     > img {
-      margin: 0 25px;
+      margin: 0 vw(25px);
     }
 
     &.info-partners {
       > img {
-        margin: 0 30px;
+        margin: 0 vw(30px);
       }
     }
   }

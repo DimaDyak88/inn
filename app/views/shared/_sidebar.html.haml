@@ -1,36 +1,39 @@
-.b-sidebar
-  .b-sidebar__top
-    = link_to root_path, class: 'logo' do
-      = image_tag 'main_logo.svg', size: '95x67'
-    .lang-switcher
-      .lang-switcher__item.active Рус
-      = link_to 'Eng', '#', class: 'lang-switcher__item'
+.b-sidebar-wrapper
+  .mobile-trigger.js-mobile-menu-trigger.g-button.bordered.small Меню
 
-  .b-menu.festival
-    .item
-      Фестиваль 2017
-      .b-submenu
-        = link_to 'Анонс', '#', class: 'item'
-        = link_to 'Карта фестиваля', '#', class: 'item'
-        = link_to 'Регламент', '#', class: 'item'
-        = link_to 'Аккредитация прессы', '#', class: 'item'
+  .b-sidebar
+    .b-sidebar__top
+      = link_to root_path, class: 'logo' do
+        = image_tag 'main_logo.svg', size: '95x67'
+      .lang-switcher
+        .lang-switcher__item.active Рус
+        = link_to 'Eng', '#', class: 'lang-switcher__item'
 
-
-  .b-menu
-    = link_to 'Попечительский совет', '#', class: 'item current'
-    = link_to 'Зрителям', '#', class: 'item'
-    = link_to 'Партнеры', '#', class: 'item'
-    = link_to 'Истории успеха', '#', class: 'item'
-
-  .b-menu
-    = link_to 'Контакты', '#', class: 'item'
-    = link_to 'Архив', '#', class: 'item'
+    .b-menu.festival
+      .item
+        Фестиваль 2017
+        .b-submenu
+          = link_to 'Анонс', '#', class: 'item'
+          = link_to 'Карта фестиваля', '#', class: 'item'
+          = link_to 'Регламент', '#', class: 'item'
+          = link_to 'Аккредитация прессы', '#', class: 'item'
 
 
-  .socials
-    = link_to '#', class: 'item facebook' do
-      = image_tag 'icons/facebook.svg'
-    = link_to '#', class: 'item instagram' do
-      = image_tag 'icons/instagram.svg'
-    = link_to '#', class: 'item youtube' do
-      = image_tag 'icons/youtube.svg'
+    .b-menu
+      = link_to 'Попечительский совет', '#', class: 'item current'
+      = link_to 'Зрителям', '#', class: 'item'
+      = link_to 'Партнеры', '#', class: 'item'
+      = link_to 'Истории успеха', '#', class: 'item'
+
+    .b-menu
+      = link_to 'Контакты', '#', class: 'item'
+      = link_to 'Архив', '#', class: 'item'
+
+
+    .socials
+      = link_to '#', class: 'item facebook' do
+        = image_tag 'icons/facebook.svg'
+      = link_to '#', class: 'item instagram' do
+        = image_tag 'icons/instagram.svg'
+      = link_to '#', class: 'item youtube' do
+        = image_tag 'icons/youtube.svg'

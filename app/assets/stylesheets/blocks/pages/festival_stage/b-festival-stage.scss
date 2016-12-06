@@ -1,13 +1,10 @@
-@import "import/base";
-
 .b-festival-stage {
-  //padding-top: 61.5%;
   height: 100vh;
   background: image_url('b-welcome/stage_works.jpg') no-repeat center / cover;
 
-  @media screen and (max-width: 900px) {
+  @include media($tablet) {
     height: auto;
-    padding-top: 60%;
+    padding-top: 75%;
   }
 
   &:after {
@@ -32,10 +29,15 @@
   }
 
   .send-work {
-    bottom: 45px;
+    bottom: vw(45px);
+
+    @include media($tablet) {
+      bottom: 32px;
+    }
+
     .info {
-      margin-top: 20px;
-      @include font-set(16px, 21px, $play-italic);
+      margin-top: vw(20px);
+      @include font-set(vw(16px), vw(21px), $play-italic);
       font-family: $play-font;
       font-style: italic;
     }
@@ -46,24 +48,24 @@
     transform: translateY(-50%);
     .play-video {
       display: inline-block;
-      width: 70px;
-      height: 70px;
+      width: vw(70px);
+      height: vw(70px);
       background: asset_data_url('icons/stage_play.svg') no-repeat center;
-      background-size: 70px;
+      background-size: vw(70px);
       cursor: pointer;
     }
 
     .info {
-      margin-top: 10px;
-      @include font-set(20px, 27px, $rubik-bold);
-      letter-spacing: 1.5px;
+      margin-top: vw(10px);
+      @include font-set(vw(20px), vw(27px), $rubik-bold);
+      letter-spacing: vw(1.5px);
       text-transform: uppercase;
     }
   }
 
   &.show-now {
     height: auto;
-    min-height: 460px;
+    min-height: vw(460px);
 
     &:after { background: rgba(#000, .6); }
 

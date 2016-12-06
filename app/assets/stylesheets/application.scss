@@ -1,4 +1,16 @@
 //= require global/reset
-//= require global/layout
-//= require_tree ./structures
-//= require_tree ./blocks
+//= require_self
+
+@import "import/base";
+@import "global/reset";
+
+@function vw($px) {
+  @return ($px / $design-width) * 100vw;
+}
+
+@import "base";
+
+@media screen and(max-width: 900px) {
+  @function vw($px) { @return $px; }
+  @import "base";
+}

@@ -1,11 +1,19 @@
-@import "import/base";
-
 .b-about-festival {
-  padding: 45px 60px 30px;
+  padding: vw(45px) vw(60px) vw(30px);
   background: #fff;
   color: #000;
 
-  .headline { margin-bottom: 40px; }
+  @include media($tablet) {
+    padding-top: 30px;
+  }
+
+  .headline {
+    margin-bottom: vw(40px);
+
+    @include media($tablet) {
+      margin-bottom: 30px;
+    }
+  }
 
   .top {
     display: flex;
@@ -14,29 +22,39 @@
 
   .about {
     width: 73%;
-    @include font-set(24px, 32px, $rubik-light);
+    @include font-set(vw(24px), vw(32px), $rubik-light);
+
+    @include media($tablet) {
+      width: 60%;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   .reglament {
     display: flex;
     align-items: center;
-    width: 174px;
-    height: 60px;
-    margin-top: 12px;
-    padding: 0 20px;
+    width: vw(174px);
+    height: vw(60px);
+    margin-top: vw(12px);
+    padding: 0 vw(20px);
     background: $c-red;
-    box-shadow: 0 10px 20px rgba(#EB4353, .4);
+    box-shadow: 0 vw(10px) vw(20px) rgba(#EB4353, .4);
 
     > .icon {
-      flex: 1 0 27px;
-      height: 30px;
-      margin-right: 20px;
+      flex: 1 0 vw(27px);
+      height: vw(30px);
+      margin-right: vw(20px);
       background: asset_data_url('icons/reglament_download.svg') no-repeat center / cover;
     }
 
     > span {
-      @include font-set(16px, 19px, $rubik-regular);
+      @include font-set(vw(16px), vw(19px), $rubik-regular);
       color: #fff;
+
+      @include media($tablet) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -47,7 +65,12 @@
 
   .description {
     width: 70%;
-    margin: 40px 35px 0 0;
-    @include font-set(15px, 22px, $rubik-light);
+    margin: vw(40px) vw(35px) 0 0;
+    @include font-set(vw(15px), vw(22px), $rubik-light);
+
+    @include media($tablet) {
+      margin-top: 30px;
+      font-size: 14px;
+    }
   }
 }

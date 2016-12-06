@@ -1,4 +1,18 @@
-@import "import/base";
+.b-sidebar-wrapper {
+  z-index: 11;
+
+  .mobile-trigger {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 30px;
+    top: 30px;
+
+    @include media($tablet) {
+      display: block;
+    }
+  }
+}
 
 .b-sidebar {
   position: fixed;
@@ -7,10 +21,14 @@
   left: 0;
   bottom: 0;
   width: $sidebar-width;
-
   padding-top: $sidebar-indent;
-
   background: image_url('b-sidebar/sidebar_bg.png') no-repeat 0 0 / cover;
+
+  @include media($tablet) {
+    padding-top: 37px;
+    left: -$sidebar-width;
+    //transition: left .2s ease;
+  }
 
   &__top {
     display: flex;
@@ -19,7 +37,13 @@
     margin: 0 $sidebar-indent 40px;
 
 
-    .logo { margin-left: -5px; }
+    .logo {
+      margin-left: -5px;
+
+      @include media($tablet) {
+        margin-top: 78px;
+      }
+    }
 
     .lang-switcher {
       display: flex;

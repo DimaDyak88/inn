@@ -1,20 +1,18 @@
-@import "import/base";
-
 .b-council {
-  padding-top: 45px;
-  padding-bottom: 80px;
+  padding-top: vw(45px);
+  padding-bottom: vw(120px);
 
   background: #fff;
   color: #000;
 
   .headline {
-    margin-bottom: 40px;
-    line-height: 51px;
-    @include both { top: 28px; }
+    margin-bottom: vw(40px);
+    line-height: vw(51px);
+    @include both { top: vw(28px); }
   }
 
   &__persons {
-    margin-left: 50px;
+    margin-left: vw(50px);
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -22,28 +20,29 @@
 
   &__person {
     flex: 0 0 25%;
+    margin-bottom: vw(-20px);
     color: #000;
 
     > .image {
       overflow: hidden;
-      width: 120px;
-      height: 120px;
+      width: vw(120px);
+      height: vw(120px);
       border-radius: 50%;
       background: image_url('fakes/person1.jpg') no-repeat center / cover;
     }
 
     > .name {
       width: 70%;
-      margin: 12px 0 0 10px;
+      margin: vw(12px) 0 0 vw(10px);
       font-family: $play-font;
-      @include font-set(20px, 27px, $play-italic-bold);
+      @include font-set(vw(20px), vw(27px), $play-italic-bold);
       font-style: italic;
     }
 
     >.info {
-      margin: 8px 0 0 10px;
-      padding-right: 60px;
-      @include font-set(14px, 20px, $rubik-light);
+      margin: vw(8px) 0 0 vw(10px);
+      padding-right: vw(60px);
+      @include font-set(vw(14px), vw(20px), $rubik-light);
     }
   }
 }

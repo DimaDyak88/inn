@@ -1,5 +1,3 @@
-@import 'import/base';
-
 html {
   height: 100%;
 }
@@ -15,8 +13,8 @@ body {
   //display: flex;
   //flex-direction: column;
 
-  font-size: 14px;
-  line-height: 22px;
+  font-size: vw(14px);
+  line-height: vw(22px);
   font-family: 'Rubik', sans-serif;
 
   cursor: default;
@@ -26,29 +24,44 @@ body {
 
 
 .l-page {
+  overflow-y: hidden;
   min-height: 100%;
-  //flex: 1 0 0;
-  //display: flex;
-  //flex-direction: column;
-  //max-width: 1280px;
-  //min-width: 1024px;
 
   &__content{
-    //flex: 1 0 0;
-    //display: flex;
-    //flex-direction: column;
-
     margin-left: $sidebar-width;
+
+    @include media($tablet) {
+      margin-left: 0;
+    }
+  }
+
+  .fade-layout {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(#000, 0.7);
+
+    @include media($tablet) { display: none; }
+
   }
 }
 
 .headline {
   display: table;
   margin: auto;
-  @include font-set(38px, 51px, $play-italic);
+  @include font-set(vw(38px), vw(51px), $play-italic);
   font-family: $play-font;
   font-style: italic;
   text-align: center;
+
+  @include media($tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 
   > b {
     font-weight: $play-italic-bold;
@@ -56,18 +69,22 @@ body {
 
   @include both {
     position: absolute;
-    top: 28px;
-    width: 50px;
-    height: 1px;
+    top: vw(28px);
+    width: vw(50px);
+    height: vw(1px);
     background: $c-red;
+
+    @include media($tablet) {
+      top: 22px;
+    }
   }
 
-  &:before { left: -80px; }
-  &:after { right: -80px; }
+  &:before { left: vw(-80px); }
+  &:after { right: vw(-80px); }
 
   > div {
     font-style: normal;
-    @include font-set(14px, 17px, $rubik-light);
+    @include font-set(vw(14px), vw(17px), $rubik-light);
     font-family: $rubik-font;
   }
 
@@ -78,6 +95,10 @@ body {
       background: #000;
     }
   }
+}
+
+.load-more {
+  cursor: pointer;
 }
 
 

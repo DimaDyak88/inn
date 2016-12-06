@@ -1,5 +1,81 @@
-@import "import/base";
-
 .b-news {
-  .headline { margin: 80px auto 40px; }
+  padding-bottom: vw(80px);
+
+  @include media($tablet) {
+    padding-bottom: 50px;
+  }
+
+  .headline {
+    margin: vw(75px) auto vw(40px);
+
+    @include media($tablet) {
+      margin-top: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 0 33.3%;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      font-size: 0;
+
+      > img {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+
+    .text {
+      flex: 1 0 auto;
+      padding: vw(15px) vw(20px);
+      @include font-set(vw(15px), vw(21px), $rubik-light);
+      letter-spacing: vw(0.1px);
+
+      @include media($tablet) {
+        font-size: 13px;
+      }
+    }
+
+    .share-block {
+      display: flex;
+      align-items: center;
+      padding-left: vw(20px);
+      height: vw(42px);
+      line-height: vw(42px);
+      @include font-set(vw(13px), false, $rubik-light);
+      border-top: 1px dashed rgba(#fff, .3);
+
+      > .icon {
+        margin-left: vw(8px);
+        width: vw(14px);
+        height: vw(14px);
+        background: asset_data_url('icons/instagram.svg') no-repeat center / contain;
+      }
+    }
+
+
+    // временные цвета
+    &:nth-child(1) { background: #34131A; }
+    &:nth-child(2) { background: #2C3024; }
+    &:nth-child(3) { background: #352918; }
+    &:nth-child(4) { background: #A10E1B; }
+    &:nth-child(5) { background: #1B1D17; }
+    &:nth-child(6) { background: #0F2739; }
+  }
+
+  .load-more {
+    display: table;
+    margin: vw(40px) auto 0;
+
+    @include media($tablet) {
+      margin-top: 30px;
+    }
+  }
 }

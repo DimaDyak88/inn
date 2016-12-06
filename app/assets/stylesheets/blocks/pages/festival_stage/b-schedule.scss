@@ -1,34 +1,45 @@
-@import "import/base";
-
 .b-schedule {
-  margin: 0 0 40px 100px;
+  margin: 0 0 vw(40px) vw(100px);
 
   &__row {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: vw(15px);
+
+    @include media($tablet) {
+      align-items: flex-start;
+    }
 
     .time {
       position: absolute;
       right: 100%;
-      top: 2px;
-      padding-right: 10px;
+      top: vw(2px);
+      padding-right: vw(10px);
       font-style: italic;
       font-family: $play-font;
-      @include font-set(14px, 16px, $play-italic-black);
+      @include font-set(vw(14px), vw(16px), $play-italic-black);
     }
 
     .name {
-      @include font-set(15px, 22px, $rubik-light);
+      @include font-set(vw(15px), vw(22px), $rubik-light);
+
+      @include media($tablet) {
+        max-width: 65%;
+      }
+
     }
 
     .place {
-      margin-left: 14px;
-      @include font-set(13px, 16px, $rubik-light);
+      margin-left: vw(14px);
+      @include font-set(vw(13px), vw(16px), $rubik-light);
       color: rgba(#fff, .7);
+
+      @include media($tablet) {
+        top: 4px;
+      }
     }
   }
 
-  .g-button { margin-top: 5px; }
+  .g-button { margin-top: vw(5px); }
 }
