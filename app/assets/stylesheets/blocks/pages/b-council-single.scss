@@ -1,0 +1,43 @@
+.b-council-single {
+  padding: vw(50px) vw(50px) vw(45px);
+
+  &__members {
+    margin-top: vw(50px);
+  }
+
+  &__member {
+    display: flex;
+    margin-bottom: vw(40px);
+    &:last-child { margin-bottom: 0; }
+
+    .member-info {
+      flex: 0 0 vw(180px);
+      padding-top: vw(12px);
+
+      .name {
+        margin-bottom: vw(10px);
+        font-family: $play-font;
+        @include font-set(vw(24px), vw(32px), $play-italic-black);
+        font-style: italic;
+      }
+
+      .role {
+        @include font-set(vw(14px), vw(20px), $rubik-light);
+      }
+    }
+
+    .photo {
+      flex: 0 0 vw(200px);
+      height: vw(200px);
+      margin: 0 vw(40px);
+      border-radius: 50%;
+      background: center no-repeat;
+      background-size: cover;
+    }
+
+    .note {
+      padding-top: vw(12px);
+      @include font-set(vw(18px), vw(27px), $rubik-light);
+    }
+  }
+}

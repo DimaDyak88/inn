@@ -4,9 +4,12 @@
 @import "import/base";
 @import "global/reset";
 
-@function vw($px) {
-  @return ($px / $design-width) * 100vw;
-}
+//@function vw($px) {
+//  @return ($px / $design-width) * 100vw;
+//}
+
+@function vw($px) { @return $px; }
+
 
 @import "base";
 

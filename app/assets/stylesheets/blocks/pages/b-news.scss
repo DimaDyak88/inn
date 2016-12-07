@@ -2,11 +2,7 @@
   padding: vw(75px) 0 vw(80px);
 
   @include media($tablet) {
-    padding-bottom: 50px;
-  }
-
-  @include media($mobile) {
-    padding-top: 50px;
+    padding: 50px 0;
   }
 
   .headline {
@@ -23,6 +19,7 @@
   }
 
   &__item {
+    overflow: hidden;
     position: relative;
     flex: 0 0 33.3%;
     display: flex;
@@ -38,23 +35,25 @@
       transition: all .15s ease;
     }
 
-    &:hover {
-      @include before {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-
     @include media($mobile) {
       flex: 1 0 100%;
     }
 
     .image {
+      overflow: hidden;
       font-size: 0;
 
       > img {
         width: 100%;
         vertical-align: top;
+      }
+
+      > .image-cover {
+        z-index: 1;
+        @include absolute(0 0 0 0);
+        transition: all .2s ease;
+        background: center no-repeat;
+        background-size: cover;
       }
     }
 
@@ -91,7 +90,6 @@
       }
     }
 
-
     // временные цвета
     &:nth-child(1) { background: #34131A; }
     &:nth-child(2) { background: #2C3024; }
@@ -99,6 +97,17 @@
     &:nth-child(4) { background: #A10E1B; }
     &:nth-child(5) { background: #1B1D17; }
     &:nth-child(6) { background: #0F2739; }
+
+    &:hover {
+      @include before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .image-cover {
+        transform: matrix(1.04,0,0,1.04,0,0);
+      }
+    }
   }
 
   .load-more {

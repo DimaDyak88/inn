@@ -37,6 +37,20 @@
         }
       }
 
+      .image-block {
+        overflow: hidden;
+        @include absolute(0 0 0 0);
+
+        > .image {
+          @include absolute(0 0 0 0);
+          transition: all .2s ease;
+          background: center no-repeat;
+          background-size: cover;
+
+          &:hover { transform: matrix(1.04,0,0,1.04,0,0); }
+        }
+      }
+
       .all-materials {
         z-index: 2;
         @include absolute(false 0 0 0);
@@ -58,9 +72,6 @@
       }
 
       &.videos {
-        .content {
-          background: image_url('fakes/fake.jpg') no-repeat center / cover;
-        }
 
         .play-button {
           width: vw(50px);
@@ -77,7 +88,7 @@
       }
 
       &.photos {
-        .image {
+        .image-block {
           position: absolute;
 
           &-1 {
@@ -85,7 +96,6 @@
             left: 0;
             right: 50%;
             bottom: 50%;
-            background: image_url('fakes/img1.jpg') no-repeat center / cover;
           }
 
           &-2 {
@@ -93,7 +103,6 @@
             top: 50%;
             bottom: 0;
             right: 75%;
-            background: image_url('fakes/img2.jpg') no-repeat center / cover;
           }
 
           &-3 {
@@ -101,7 +110,6 @@
             top: 50%;
             right: 50%;
             bottom: 25%;
-            background: image_url('fakes/img3.jpg') no-repeat center / cover;
           }
 
           &-4 {
@@ -109,7 +117,6 @@
             top: 75%;
             right: 50%;
             bottom: 0;
-            background: image_url('fakes/img4.jpg') no-repeat center / cover;
           }
 
           &-5 {
@@ -117,7 +124,12 @@
             bottom: 0;
             right: 0;
             left: 50%;
-            background: image_url('fakes/img5.jpg') no-repeat center / cover;
+          }
+        }
+
+        .image {
+          &:hover {
+            transform: matrix(1.12,0,0,1.12,0,0);
           }
         }
 

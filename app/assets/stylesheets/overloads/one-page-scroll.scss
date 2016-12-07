@@ -1,0 +1,37 @@
+.onepage-pagination {
+  z-index: 10;
+  position: fixed;
+  right: vw(32px);
+  top: 50%;
+  transform: translateY(-50%);
+
+  li {
+    margin: vw(10px) 0;
+
+    a {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      padding: 0;
+      width: vw(10px);
+      height: vw(10px);
+      border-radius: 50%;
+      border: 1px solid #fff;
+
+      @include before($content: none);
+
+      &.active {
+        border-color: $c-red;
+        @include before {
+          left: 0;
+          right: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          background: $c-red;
+          border: none;
+        }
+      }
+    }
+  }
+}

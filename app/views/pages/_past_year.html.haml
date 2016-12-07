@@ -7,14 +7,22 @@
   .b-past-year__media
     .b-past-year__media-section.videos
       .content
-        .play-button
+        .image-block
+          .image{ style: "background-image: url(#{asset_path('fakes/fake.jpg')})"}
+          .play-button
       = link_to 'Все видео 2016', '#', class: 'all-materials'
 
     .b-past-year__media-section.photos
       .content
-        .image.image-1
-        .image.image-2
-        .image.image-3
-        .image.image-4
-        .image.image-5
+        .image-block.image-block-1
+          .image{ style: "background-image: url(#{asset_path('fakes/img1.jpg')})"}
+        .image-block.image-block-2
+          .image{ style: "background-image: url(#{asset_path('fakes/img2.jpg')})"}
+        .image-block.image-block-3
+          .image{ style: "background-image: url(#{asset_path('fakes/img3.jpg')})"}
+        .image-block.image-block-4
+          .image{ style: "background-image: url(#{asset_path('fakes/img4.jpg')})"}
+        .image-block.image-block-5
+          .image{ style: "background-image: url(#{asset_path('fakes/img5.jpg')})"}
+
       = link_to 'Все фото 2016', '#', class: 'all-materials'

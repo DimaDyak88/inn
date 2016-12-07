@@ -1,5 +1,5 @@
 .b-sidebar-wrapper
-  .mobile-trigger.js-mobile-menu-trigger.g-button.bordered.small Меню
+  .mobile-trigger.js-mobile-menu-trigger.g-button.bordered.small.no-hover Меню
 
   .b-sidebar
     .b-sidebar__top
@@ -14,16 +14,16 @@
         Фестиваль 2017
         .b-submenu
           = link_to 'Анонс', '#', class: 'item'
-          = link_to 'Карта фестиваля', '#', class: 'item'
+          = sidebar_link_to 'Карта фестиваля', map_pages_path
           = link_to 'Регламент', '#', class: 'item'
           = link_to 'Аккредитация прессы', '#', class: 'item'
           = link_to 'Купить билет', '#', class: 'item buy-ticket'
 
     .b-menu
-      = link_to 'Попечительский совет', '#', class: 'item current'
+      = sidebar_link_to 'Попечительский совет', council_pages_path
       = link_to 'Зрителям', '#', class: 'item'
       = link_to 'Партнеры', '#', class: 'item'
-      = link_to 'Истории успеха', '#', class: 'item'
+      = sidebar_link_to 'Истории успеха', success_story_pages_path
 
     .b-menu
       = link_to 'Контакты', '#', class: 'item'

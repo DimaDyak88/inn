@@ -1,3 +1,6 @@
+$default: #fff;
+$hovered: $c-red;
+
 .b-menu {
   margin-bottom: 25px;
 
@@ -7,13 +10,16 @@
     @include font-set(13px, 15px, $rubik-medium);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #fff;
+    color: $default;
     transition: color .15s ease;
     &:hover {
-      color: $c-red;
+      color: $hovered;
     }
 
-    &.current { background: #740312; }
+    &.current {
+      background: #740312;
+      &:hover { color: $default; }
+    }
   }
 
   &.festival {
@@ -21,7 +27,7 @@
 
     > .item {
       &:hover {
-        color: #fff;
+        color: $default;
       }
     }
   }
@@ -35,11 +41,14 @@
     padding-left: 20px;
     @include font-set(15px, 18px, $rubik-light);
     text-transform: none;
-    color: #fff;
+    color: $default;
     transition: color .15s ease;
 
-    &:hover {
-      color: $c-red;
+    &:hover { color: $hovered; }
+
+    &.current {
+      background: #740312;
+      &:hover { color: $default; }
     }
 
     &.buy-ticket {
@@ -53,7 +62,7 @@
       transition: background-image .15s ease;
 
       &:hover {
-        color: #fff;
+        color: $default;
         background: asset_data_url('b-sidebar/buy_ticket_hover.svg') no-repeat center / cover;
       }
     }

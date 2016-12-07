@@ -5,6 +5,7 @@
 
   @include media($tablet) {
     padding: 40px 60px;
+    background-attachment: scroll;
   }
 
   @include media($mobile) {

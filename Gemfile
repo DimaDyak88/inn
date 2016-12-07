@@ -46,5 +46,3 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'quiet_assets', group: :development
 gem 'autoprefixer-rails'
-
-

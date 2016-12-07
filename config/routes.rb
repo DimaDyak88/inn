@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   resources :pages, only: [:index] do
     get 'list', on: :collection
+    get 'success_story', on: :collection
+    get 'council', on: :collection
+    get 'map', on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
