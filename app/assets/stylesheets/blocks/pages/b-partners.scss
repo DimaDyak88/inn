@@ -1,8 +1,16 @@
 .b-partners {
   padding-top: 75px;
 
+  @include media($tablet) {
+    padding-top: 50px;
+  }
+
   .headline {
     margin-bottom: vw(40px);
+
+    @include media($mobile) {
+      margin-bottom: 30px;
+    }
   }
 
   .info-partners-title {
@@ -11,6 +19,12 @@
     font-family: $play-font;
     @include font-set(vw(20px), vw(27px), $play-italic-bold);
     font-style: italic;
+
+    @include media($mobile) {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__list {
@@ -20,13 +34,26 @@
     align-items: center;
     margin-bottom: vw(75px);
 
+    @include media($mobile) {
+      margin-bottom: 20px;
+    }
+
     > img {
       margin: 0 vw(25px);
+
+      @include media($tablet) {
+        margin: 0 12px;
+      }
+
+      @include media($mobile) {
+        margin-bottom: 30px;
+      }
     }
 
     &.info-partners {
       > img {
-        margin: 0 vw(30px);
+        margin-right: vw(30px);
+        margin-left: vw(30px);
       }
     }
   }

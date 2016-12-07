@@ -1,6 +1,10 @@
 .b-schedule {
   margin: 0 0 vw(40px) vw(100px);
 
+  @include media($mobile) {
+    margin-left: 70px;
+  }
+
   &__row {
     display: flex;
     align-items: center;
@@ -28,6 +32,11 @@
         max-width: 65%;
       }
 
+      @include media($mobile) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
     }
 
     .place {
@@ -37,6 +46,12 @@
 
       @include media($tablet) {
         top: 4px;
+      }
+
+      @include media($mobile) {
+        margin-right: 10px;
+        font-size: 11px;
+        line-height: 12px;
       }
     }
   }

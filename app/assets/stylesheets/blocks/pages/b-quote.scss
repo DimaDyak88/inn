@@ -3,10 +3,22 @@
   background: image_url('b-quote/quote_bg.jpg') no-repeat center / cover;
   background-attachment: fixed;
 
+  @include media($tablet) {
+    padding: 40px 60px;
+  }
+
+  @include media($mobile) {
+    padding: 30px 15px;
+  }
+
   .headline {
     @include both {
       opacity: .5;
       background: #fff;
+
+      @include media($mobile) {
+        content: none;
+      }
     }
   }
 
@@ -16,10 +28,30 @@
     justify-content: center;
     margin-top: vw(80px);
 
+    @include media($tablet) {
+      margin-top: 60px;
+    }
+
+    @include media($mobile) {
+      margin-top: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .name {
       font-family: $play-font;
       @include font-set(vw(24px), vw(32px), $play-italic-black);
       font-style: italic;
+
+      @include media($tablet) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      @include media($mobile) {
+        order: 2;
+        flex: 0 0 auto;
+      }
     }
 
     .photo {
@@ -29,10 +61,34 @@
       border: vw(6px) solid #fff;
       background: image_url('fakes/quote_author.jpg') no-repeat center / cover;
       border-radius: 50%;
+
+      @include media($tablet) {
+        flex: 0 0 156px;
+        height: 156px;
+        margin: 0 40px;
+      }
+
+      @include media($mobile) {
+        order: 1;
+        margin: 0 20px 0 0;
+        height: 70px;
+        flex: 0 070px;
+        border-width: 3px;
+      }
     }
 
     .message {
       @include font-set(vw(24px), vw(35px), $rubik-light);
+
+      @include media($tablet) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @include media($mobile) {
+        order: 3;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -41,6 +97,14 @@
     margin: vw(95px) auto 0;
     padding-left: vw(40px);
     padding-right: vw(12px);
+
+    @include media($tablet) {
+      margin-top: 65px;
+    }
+
+    @include media($mobile) {
+      margin-top: 30px;
+    }
 
     @include before {
       position: absolute;

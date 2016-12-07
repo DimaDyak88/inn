@@ -1,18 +1,32 @@
 .b-past-year {
+  @include media($tablet) {
+    padding-top: 50px;
+  }
+
   .headline {
     margin: vw(75px) auto vw(35px);
 
     @include media($tablet) {
-      margin: 50px auto 30px;
+      margin: 0 auto 30px;
     }
   }
 
   &__media {
     display: flex;
+    flex-wrap: wrap;
 
     &-section {
       flex: 1 0 50%;
       padding-top: 28vw;
+
+      @include media($tablet) {
+        padding-top: 36vw;
+      }
+
+      @include media($mobile) {
+        flex: 1 0 100%;
+        padding-top: 75vw;
+      }
 
       .content {
         @include absolute(0 0 vw(40px) 0);
@@ -36,6 +50,10 @@
           height: 30px;
           line-height: 30px;
           font-size: 12px;
+        }
+
+        @include media($mobile) {
+          font-size: 10px;
         }
       }
 

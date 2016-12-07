@@ -3,13 +3,21 @@
 
   .mobile-trigger {
     display: none;
-    position: absolute;
     z-index: 100;
-    left: 30px;
-    top: 30px;
+    position: absolute;
+    @include absolute(30px false false 30px);
+
+    &.fixed {
+      position: fixed;
+    }
 
     @include media($tablet) {
       display: block;
+    }
+
+    @include media($mobile) {
+      top: 20px;
+      left: 20px;
     }
   }
 }

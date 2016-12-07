@@ -20,10 +20,12 @@ $sidebar-indent: 30px;
 $design-width: 1280px;
 
 $tablet-width: 895px;
+$mobile-width: 624px;
+$mobile-width: 600px;
 $scroll-width: 17px;
 
 $tablet: max-width $tablet-width + $scroll-width;
-$mobile: 500px;
+$mobile: max-width $mobile-width + $scroll-width;
 
 
 //$font-name_base: Roboto;

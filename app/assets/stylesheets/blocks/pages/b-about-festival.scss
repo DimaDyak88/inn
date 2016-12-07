@@ -4,7 +4,11 @@
   color: #000;
 
   @include media($tablet) {
-    padding-top: 30px;
+    padding: 30px;
+  }
+
+  @include media($mobile) {
+    padding: 30px 15px;
   }
 
   .headline {
@@ -18,16 +22,25 @@
   .top {
     display: flex;
     justify-content: space-between;
+
+    @include media($mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   .about {
-    width: 73%;
+    width: 70%;
     @include font-set(vw(24px), vw(32px), $rubik-light);
 
     @include media($tablet) {
-      width: 60%;
+      width: 65%;
       font-size: 18px;
       line-height: 24px;
+    }
+
+    @include media($mobile) {
+      flex: 1 0 100%;
     }
   }
 
@@ -40,6 +53,10 @@
     padding: 0 vw(20px);
     background: $c-red;
     box-shadow: 0 vw(10px) vw(20px) rgba(#EB4353, .4);
+
+    @include media($mobile) {
+      margin-top: 20px;
+    }
 
     > .icon {
       flex: 1 0 vw(27px);
@@ -71,6 +88,11 @@
     @include media($tablet) {
       margin-top: 30px;
       font-size: 14px;
+    }
+
+    @include media($mobile) {
+      width: 100%;
+      margin-right: 0;
     }
   }
 }

@@ -9,12 +9,12 @@ $ ->
   $('.js-mobile-menu-trigger').on 'click', (event) ->
     $target = $(event.currentTarget)
     if state is 'close'
-      $target.text 'Закрыть'
+      $target.addClass('fixed').text('Закрыть')
       $('.b-sidebar').css('left', 0)
       $('.fade-layout').show()
       state = 'open'
     else
-      $target.text 'Меню'
+      $target.removeClass('fixed').text('Меню')
       $('.b-sidebar').css('left', -SIDEBAR_WIDTH)
       $('.fade-layout').hide()
       state = 'close'

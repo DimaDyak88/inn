@@ -1,15 +1,30 @@
-  .b-footer {
+.b-footer {
   margin: 0 vw(50px);
   padding: vw(20px) 0 vw(40px);
   border-top: vw(1px) solid rgba(#D8D8D8, .4);
-
   @include font-set(vw(16px), vw(19px), $rubik-light);
+
+  @include media($tablet) {
+    padding-bottom: 20px;
+    margin: 0 20px;
+  }
+
+  @include media($mobile) {
+    margin: 0 15px;
+    font-size: 14px;
+    line-height: 17px;
+  }
 
   .years {
     margin: vw(7px) 0 0 vw(15px);
     font-size: vw(13px);
     line-height: vw(15px);
     opacity: .5;
+
+    @include media($mobile) {
+      margin-left: 0;
+    }
+
   }
 
   &.secondary {

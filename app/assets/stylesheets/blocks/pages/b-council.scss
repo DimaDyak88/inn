@@ -1,14 +1,40 @@
 .b-council {
   padding-top: vw(45px);
   padding-bottom: vw(120px);
-
   background: #fff;
   color: #000;
+
+  @include media($tablet) {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  @include media($mobile) {
+    padding-bottom: 30px;
+  }
 
   .headline {
     margin-bottom: vw(40px);
     line-height: vw(51px);
-    @include both { top: vw(28px); }
+
+    @include both {
+      top: vw(28px);
+    }
+
+    @include media($tablet) {
+      margin-bottom: 30px;
+      line-height: vw(40px);
+
+      @include both { top: vw(22px); }
+    }
+
+    @include media($mobile) {
+      line-height: 32px;
+
+      @include both {
+        content: none;
+      }
+    }
   }
 
   &__persons {
@@ -16,6 +42,15 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+
+    @include media($tablet) {
+      margin-left: 30px;
+    }
+
+    @include media($mobile) {
+      margin-left: 0;
+      padding: 0 15px;
+    }
   }
 
   &__person {
@@ -23,12 +58,37 @@
     margin-bottom: vw(-20px);
     color: #000;
 
+    @include media($mobile) {
+      flex: 1 0 100%;
+      margin-bottom: 24px;
+
+      &:nth-child(4) {
+        order: 0 !important;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     > .image {
       overflow: hidden;
       width: vw(120px);
       height: vw(120px);
       border-radius: 50%;
       background: image_url('fakes/person1.jpg') no-repeat center / cover;
+
+      @include media($tablet) {
+        width: 92px;
+        height: 92px;
+      }
+
+      @include media($mobile) {
+        float: left;
+        margin-right: 15px;
+        width: 64px;
+        height: 64px;
+      }
     }
 
     > .name {
@@ -37,12 +97,34 @@
       font-family: $play-font;
       @include font-set(vw(20px), vw(27px), $play-italic-bold);
       font-style: italic;
+
+      @include media($tablet) {
+        width: 60%;
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      @include media($mobile) {
+        width: 100%;
+        margin-top: 0;
+      }
     }
 
     >.info {
       margin: vw(8px) 0 0 vw(10px);
       padding-right: vw(60px);
       @include font-set(vw(14px), vw(20px), $rubik-light);
+
+      @include media($tablet) {
+        padding-right: 0;
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      @include media($mobile) {
+        margin-top: 5px;
+        overflow: hidden;
+      }
     }
   }
 }

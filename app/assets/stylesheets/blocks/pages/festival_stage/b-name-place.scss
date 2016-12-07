@@ -5,19 +5,38 @@
   font-style: italic;
   font-family: $play-font;
 
+  @include media($tablet) {
+    width: 50%;
+    left: 125px;
+    top: 22px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include media($mobile) {
+    width: auto;
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 0 10px;
+    top: auto;
+    left: 0;
+    text-align: center;
+    font-size: 28px;
+    line-height: 37px;
+  }
+
   > b { font-weight: $play-italic-black; }
 
   .show-now & {
     left: vw(100px);
 
-    @include media($tablet) { left: 125px; }
-  }
+    @include media($tablet) {
+      left: 125px;
+    }
 
-  @include media($tablet) {
-    left: 125px;
-    top: 22px;
-    font-size: 30px;
-    line-height: 40px;
+    @include media($mobile) {
+      left: 0;
+    }
   }
 }
 
@@ -29,6 +48,17 @@
   @include media($tablet) {
     top: 22px;
     right: 32px;
+  }
+
+  @include media($mobile) {
+    margin-bottom: 75px;
+  }
+
+  @include media($mobile) {
+    position: relative;
+    left: 0;
+    top: auto;
+    text-align: center;
   }
 
   .year {

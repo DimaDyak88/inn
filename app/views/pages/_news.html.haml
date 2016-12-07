@@ -4,7 +4,7 @@
     %b новости
 
   .b-news__list
-    .b-news__item
+    = link_to 'https:/ya.ru', class: 'b-news__item' do
       .image
         = image_tag 'fakes/news1.jpg'
       .text
@@ -13,7 +13,7 @@
         .date 8 мая в 16:15
         .icon
 
-    .b-news__item
+    = link_to '#', class: 'b-news__item' do
       .image
         = image_tag 'fakes/news2.jpg'
       .text По заявкам наших дорогих любителей «Короче» к прокату присоединились следующие площадки: – Ростов-на-Дону, к-тр Большой – с 7 мая; – Барнаул, к-тр «Родина» – с 17 мая. УРА!!!
@@ -21,7 +21,7 @@
         .date 8 мая в 16:15
         .icon
 
-    .b-news__item
+    = link_to '#', class: 'b-news__item' do
       .image
         = image_tag 'fakes/news1.jpg'
       .text
@@ -30,7 +30,7 @@
         .date 8 мая в 16:15
         .icon
 
-    .b-news__item
+    = link_to '#', class: 'b-news__item' do
       .image
         = image_tag 'fakes/news3.jpg'
       .text
@@ -39,7 +39,7 @@
         .date 8 мая в 16:15
         .icon
 
-    .b-news__item
+    = link_to '#', class: 'b-news__item' do
       .image
         = image_tag 'fakes/news4.jpg'
       .text
@@ -48,7 +48,7 @@
         .date 8 мая в 16:15
         .icon
 
-    .b-news__item
+    = link_to '#', class: 'b-news__item' do
       .image
         = image_tag 'fakes/news5.jpg'
       .text Короче, начинаем принимать заявки. Сегодня 1 апреля, день первый. 20 июля, день последний. Даты фестиваля 19-21 августа. Призовой фонд 1 миллион. Погода – лето и море. Сжимайте крутые идеи до 15 мин. Самые крутые - станут полным метром. Наш победитель «Короче-2013» Роман Артемьев это уже сделал. Помните «Спаситель»? Полный метр выходит 16/06/2016. А альманах «Короче» на 50 экранах страны с 28 апреля. Спешите, ждите, летите, снимайте.
@@ -57,4 +57,3 @@
         .icon
 
   .load-more.g-button.bordered.small Показать еще
-

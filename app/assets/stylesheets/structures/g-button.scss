@@ -6,11 +6,17 @@
   text-decoration: none;
   letter-spacing: vw(1.5px);
   @include font-set(vw(20px), vw(27px), $rubik-bold);
+  transition: background-color .15s ease;
 
   @include media($tablet) {
     font-size: 18px;
     letter-spacing: 1.35px;
   }
+
+  @include media($mobile) {
+    font-size: 16px;
+  }
+
 
   &.bordered {
     padding: vw(18px) vw(25px) vw(15px);
@@ -20,6 +26,14 @@
 
     @include media($tablet) {
       padding: 11px 20px 8px;
+    }
+
+    @include media($mobile) {
+      padding: 7px 12px 4px;
+    }
+
+    &:hover {
+      background: $c-red;
     }
   }
 

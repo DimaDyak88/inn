@@ -7,6 +7,10 @@
     padding-top: 75%;
   }
 
+  @include media($mobile) {
+    padding: 75px 0 30px;
+  }
+
   &:after {
     z-index: 1;
     content: '';
@@ -17,6 +21,10 @@
   .container {
     z-index: 2;
     @include absolute(0 0 0 0);
+
+    @include media($mobile) {
+      position: relative;
+    }
   }
 
   .action-section {
@@ -26,6 +34,10 @@
     right: 0;
     margin: auto;
     text-align: center;
+
+    @include media($mobile) {
+      position: relative;
+    }
   }
 
   .send-work {
@@ -35,17 +47,31 @@
       bottom: 32px;
     }
 
+    @include media($mobile) {
+      bottom: 0;
+    }
+
     .info {
       margin-top: vw(20px);
       @include font-set(vw(16px), vw(21px), $play-italic);
       font-family: $play-font;
       font-style: italic;
+
+      @include media($mobile) {
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
   }
 
   .report-video {
     top: 50%;
     transform: translateY(-50%);
+
+    @include media($mobile) {
+      transform: translate(0);
+    }
+
     .play-video {
       display: inline-block;
       width: vw(70px);
@@ -53,6 +79,12 @@
       background: asset_data_url('icons/stage_play.svg') no-repeat center;
       background-size: vw(70px);
       cursor: pointer;
+
+      @include media($mobile) {
+        width: 60px;
+        height: 60px;
+        background-size: 60px;
+      }
     }
 
     .info {
@@ -60,6 +92,10 @@
       @include font-set(vw(20px), vw(27px), $rubik-bold);
       letter-spacing: vw(1.5px);
       text-transform: uppercase;
+
+      @include media($mobile) {
+        font-size: 18px;
+      }
     }
   }
 

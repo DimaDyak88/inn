@@ -8,12 +8,23 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #fff;
-
+    transition: color .15s ease;
+    &:hover {
+      color: $c-red;
+    }
 
     &.current { background: #740312; }
   }
 
-  &.festival { margin-bottom: 50px; }
+  &.festival {
+    margin-bottom: 30px;
+
+    > .item {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
 
 
@@ -25,5 +36,26 @@
     @include font-set(15px, 18px, $rubik-light);
     text-transform: none;
     color: #fff;
+    transition: color .15s ease;
+
+    &:hover {
+      color: $c-red;
+    }
+
+    &.buy-ticket {
+      width: 136px;
+      height: 42px;
+      padding: 0;
+      background: asset_data_url('b-sidebar/buy_ticket.svg') no-repeat center / cover;
+      line-height: 42px;
+      text-align: center;
+      font-weight: $rubik-regular;
+      transition: background-image .15s ease;
+
+      &:hover {
+        color: #fff;
+        background: asset_data_url('b-sidebar/buy_ticket_hover.svg') no-repeat center / cover;
+      }
+    }
   }
 }

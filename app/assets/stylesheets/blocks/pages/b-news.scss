@@ -1,15 +1,19 @@
 .b-news {
-  padding-bottom: vw(80px);
+  padding: vw(75px) 0 vw(80px);
 
   @include media($tablet) {
     padding-bottom: 50px;
   }
 
-  .headline {
-    margin: vw(75px) auto vw(40px);
+  @include media($mobile) {
+    padding-top: 50px;
+  }
 
-    @include media($tablet) {
-      margin-top: 50px;
+  .headline {
+    margin: 0 auto vw(40px);
+
+    @include media($mobile) {
+      margin-bottom: 30px;
     }
   }
 
@@ -19,9 +23,31 @@
   }
 
   &__item {
+    position: relative;
     flex: 0 0 33.3%;
     display: flex;
     flex-direction: column;
+    color: #fff;
+
+    @include before {
+      opacity: 0;
+      visibility: hidden;
+      z-index: 2;
+      @include absolute(0 0 0 0);
+      border: 4px solid $c-red;
+      transition: all .15s ease;
+    }
+
+    &:hover {
+      @include before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include media($mobile) {
+      flex: 1 0 100%;
+    }
 
     .image {
       font-size: 0;
@@ -39,6 +65,7 @@
       letter-spacing: vw(0.1px);
 
       @include media($tablet) {
+        padding: 15px 11px 12px 15px;
         font-size: 13px;
       }
     }
@@ -51,6 +78,10 @@
       line-height: vw(42px);
       @include font-set(vw(13px), false, $rubik-light);
       border-top: 1px dashed rgba(#fff, .3);
+
+      @include media($tablet) {
+        padding-left: 15px;
+      }
 
       > .icon {
         margin-left: vw(8px);
