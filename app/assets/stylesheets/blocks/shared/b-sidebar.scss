@@ -35,7 +35,6 @@
   @include media($tablet) {
     padding-top: 37px;
     left: -$sidebar-width;
-    //transition: left .2s ease;
   }
 
   &__top {

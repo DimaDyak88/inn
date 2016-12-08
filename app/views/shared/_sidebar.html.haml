@@ -9,15 +9,14 @@
         .lang-switcher__item.active Рус
         = link_to 'Eng', '#', class: 'lang-switcher__item'
 
-    .b-menu.festival
-      .item
-        Фестиваль 2017
-        .b-submenu
-          = link_to 'Анонс', '#', class: 'item'
-          = sidebar_link_to 'Карта фестиваля', map_pages_path
-          = link_to 'Регламент', '#', class: 'item'
-          = link_to 'Аккредитация прессы', '#', class: 'item'
-          = link_to 'Купить билет', '#', class: 'item buy-ticket'
+    .b-festival-menu
+      .title Фестиваль 2017
+      .b-menu
+        = link_to 'Анонс', '#', class: 'item'
+        = sidebar_link_to 'Карта фестиваля', map_pages_path
+        = link_to 'Регламент', '#', class: 'item'
+        = link_to 'Аккредитация прессы', '#', class: 'item'
+        = link_to 'Купить билет', '#', class: 'item buy-ticket'
 
     .b-menu
       = sidebar_link_to 'Попечительский совет', council_pages_path

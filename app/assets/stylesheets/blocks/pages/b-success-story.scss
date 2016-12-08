@@ -1,15 +1,19 @@
 .b-success-story {
 
   height: 100vh;
+
   .b-footer {
     z-index: 2;
-    @include absolute(false 0 0 0);
+    margin: 0;
   }
 
   &__person {
+    display: flex;
+    flex-direction: column;
+
     height: 100vh;
     padding: vw(50px) vw(30px) 0 vw(50px);
-    background: #000 no-repeat top left vw(140px);
+    background: #000 no-repeat top right;
     background-size: cover;
     @include after {
       z-index: 1;
@@ -35,7 +39,8 @@
 
     .description {
       z-index: 2;
-      width: 57%;
+      width: 65%;
+      flex: 1 0 0;
       margin-bottom: 80px;
       font-weight: $rubik-light;
     }
@@ -44,6 +49,8 @@
       z-index: 2;
       display: flex;
       flex-wrap: wrap;
+      //margin-bottom: 100px;
+      flex: 0 0 30%;
     }
 
     .awards-item {

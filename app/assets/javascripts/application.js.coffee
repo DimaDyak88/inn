@@ -2,7 +2,8 @@
 #= require jquery_ujs
 #= require jquery.onepage-scroll
 #= require map
-#= require_tree .
+#= require places_data
+
 
 $ ->
   state = 'close'
@@ -27,8 +28,10 @@ $ ->
     $(".main").onepage_scroll({
       loop: false,
       sectionContainer: '.b-success-story__person',
-      animationTime: 250,
+      animationTime: 650,
       keyboard: false
     });
 
-  window.drawMarkers()
+
+  if $('#map-holder').length
+    window.drawMarkers(placesData) # placesData from require places_data

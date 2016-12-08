@@ -1,17 +1,22 @@
 $default: #fff;
 $hovered: $c-red;
 
+@mixin menu-item () {
+  display: block;
+  padding: 8px 30px;
+  @include font-set(13px, 15px, $rubik-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $default;
+  transition: color .15s ease;
+}
+
 .b-menu {
   margin-bottom: 25px;
 
   > .item {
-    display: block;
-    padding: 8px $sidebar-indent;
-    @include font-set(13px, 15px, $rubik-medium);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: $default;
-    transition: color .15s ease;
+    @include menu-item;
+
     &:hover {
       color: $hovered;
     }
@@ -33,37 +38,32 @@ $hovered: $c-red;
   }
 }
 
+.b-festival-menu {
+  margin-bottom: 35px;
 
-.b-submenu {
-  > .item {
-    display: block;
-    margin: 12px 0;
-    padding-left: 20px;
-    @include font-set(15px, 18px, $rubik-light);
-    text-transform: none;
-    color: $default;
-    transition: color .15s ease;
+  .title { @include menu-item; }
 
-    &:hover { color: $hovered; }
+  .b-menu {
+    .item {
+      padding-left: 50px;
+      @include font-set(15px, 18px, $rubik-light);
+      text-transform: none;
 
-    &.current {
-      background: #740312;
-      &:hover { color: $default; }
-    }
+      &.buy-ticket {
+        margin: 12px 0 0 30px;
+        width: 136px;
+        height: 42px;
+        padding: 0;
+        background: asset_data_url('b-sidebar/buy_ticket.svg') no-repeat center / cover;
+        line-height: 42px;
+        text-align: center;
+        font-weight: $rubik-regular;
+        transition: background-image .15s ease;
 
-    &.buy-ticket {
-      width: 136px;
-      height: 42px;
-      padding: 0;
-      background: asset_data_url('b-sidebar/buy_ticket.svg') no-repeat center / cover;
-      line-height: 42px;
-      text-align: center;
-      font-weight: $rubik-regular;
-      transition: background-image .15s ease;
-
-      &:hover {
-        color: $default;
-        background: asset_data_url('b-sidebar/buy_ticket_hover.svg') no-repeat center / cover;
+        &:hover {
+          color: $default;
+          background: asset_data_url('b-sidebar/buy_ticket_hover.svg') no-repeat center / cover;
+        }
       }
     }
   }

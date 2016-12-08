@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="45px" viewBox="0 0 32 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Hotel</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web-design-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-Map" transform="translate(-1070.000000, -358.000000)">
+            <g id="Hotel" transform="translate(1070.000000, 358.000000)">
+                <path d="M14.8965517,42.8139535 C14.8965517,43.9075104 14.3448276,45 16,45 C17.6551724,45 17.1034483,44.0945733 17.1034483,42.8139535 C17.1034483,34.0697674 32,24.6000061 32,15.8488372 C32,7.09576612 24.836556,0 16,0 C7.163444,0 0,7.09576612 0,15.8488372 C0,24.6019083 14.8965517,34.0697674 14.8965517,42.8139535 Z" id="Pin" fill="#32C606"></path>
+                <path d="M7,11 L7,20 L9,20 L9,19 L23,19 L23,20 L25,20 L25,14 C25,13.5846429 24.28,13.2142857 24,13 C23.56,13.2142857 22.84,13.5846429 23,14 L23,17 L9,17 L9,11 C9.16,10.3707143 8.44,10 8,10 C7.72,10 7,10.3707143 7,11 Z M12,12 C10.8972,12 10,12.8972 10,14 C10,15.1028 10.8972,16 12,16 C13.1028,16 14,15.1028 14,14 C14,12.8972 13.1028,12 12,12 L12,12 Z M15,13 L15,16 L22,16 L22,13 C22,12.5384 21.5318261,12 21,12 L16,12 C15.4681739,12 15,12.5384 15,13 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
