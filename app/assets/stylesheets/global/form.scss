@@ -1,0 +1,66 @@
+$unselected-color: rgba(#fff, .4);
+$selected-color: rgba(#fff, 1);
+
+.form {
+  .input {
+    width: 100%;
+    margin-bottom: vw(30px);
+
+    > label {
+      z-index: 1;
+      position: absolute;
+      //bottom: vw(8px);
+      top: vw(22px);
+      color: $unselected-color;
+      @include font-set(vw(18px), vw(22px), $rubik-light);
+      transition: all .15s ease;
+    }
+
+    > input,
+    > textarea {
+      position: relative;
+      z-index: 2;
+      padding-top: vw(22px);
+      padding-bottom: vw(8px);
+      width: 100%;
+      @include font-set(vw(18px), vw(22px), $rubik-light);
+      border: none;
+      box-shadow: 0 2px 0 -1px $unselected-color;
+      background: transparent;
+      outline: none;
+      color: #fff;
+    }
+
+    &.selected {
+      > label {
+        top: 0;
+        //bottom: vw(38px);
+        font-size: vw(13px);
+        line-height: vw(15px);
+      }
+
+      > input {
+        box-shadow: 0 2px 0 0 $selected-color;
+      }
+    }
+  }
+
+  .submit {
+    pointer-events: none;
+    opacity: .5;
+    padding: vw(8px) vw(18px) vw(6px);
+    text-transform: uppercase;
+    border-width: 2px;
+    color: $c-red;
+    transition: all .15s ease;
+
+    &:hover { color: #fff; }
+  }
+
+  &.valid {
+    .submit {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}

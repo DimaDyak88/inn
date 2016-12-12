@@ -10,7 +10,9 @@
     = csrf_meta_tags
   %body
     .l-page
-      .fade-layout
-      = render 'shared/sidebar'
+      = render 'application/sidebar'
       .l-page__content
         = yield
+      .l-popup-layout
+        .fade-layer
+        .b-popup

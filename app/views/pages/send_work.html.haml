@@ -1,0 +1,58 @@
+.b-send-work
+  = form_for :object, html: { class: 'form js-contacts-form' } do |f|
+    .form__inner
+      .title Форма заявки на участие  в фестивале
+      .close.js-close
+      .input
+        = f.label :name, "Название фильма#{'<abbr>*</abbr>'}".html_safe
+        = f.text_field :name, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, "Режиссёр#{'<abbr>*</abbr>'}".html_safe
+        = f.text_field :name, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, "В ролях#{'<abbr>*</abbr>'}".html_safe
+        = f.text_area :email, class: 'js-contacts-form__name'
+
+      .composite-input
+        .input
+          = f.label :name, "Год производства#{'<abbr>*</abbr>'}".html_safe
+          = f.text_field :email, class: 'js-contacts-form__name'
+
+        .input
+          = f.label :name, "Хронометраж#{'<abbr>*</abbr>'}".html_safe
+          = f.text_field :email, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, 'Город'
+        = f.text_field :email, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, "Описание#{'<abbr>*</abbr>'}".html_safe
+        = f.text_area :description, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, 'Участие в други фестивалях'
+        = f.text_field :email, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, "Ссылка для скачивания файла#{'<abbr>*</abbr>'}".html_safe
+        = f.text_field :email, class: 'js-contacts-form__name'
+      .tip Выложите файл на любой удобный вам файлообменный сервис и укажите ссылку на него.
+
+      .input
+        = f.label :name, 'Дополнительная информация'
+        = f.text_field :email, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, 'Откуда вы узнали о нас'
+        = f.text_field :email, class: 'js-contacts-form__name'
+
+      .input
+        = f.label :name, "Электронная почта#{'<abbr>*</abbr>'}".html_safe
+        = f.text_field :email, class: 'js-contacts-form__name'
+
+    .form__bottom
+      = f.submit 'Отправить', class: 'submit g-button bordered small'
+      .note Заполните все поля, отмеченные *

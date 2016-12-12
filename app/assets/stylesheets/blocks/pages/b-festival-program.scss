@@ -1,0 +1,68 @@
+.b-festival-program {
+  .headline {
+    margin-bottom: vw(50px);
+  }
+
+  &__top {
+    padding-top: vw(50px);
+    background: #000;
+
+    .days-list {
+      display: flex;
+      justify-content: center;
+      @include font-set(vw(18px), vw(22px), $rubik-medium);
+
+      &__item {
+        display: flex;
+        padding: 0 vw(10px) vw(10px);
+        margin: 0 vw(4px);
+        cursor: pointer;
+
+        .week-day {
+          margin-left: vw(6px);
+          @include font-set(vw(11px), vw(13px), $rubik-light);
+        }
+
+        &.active {
+          box-shadow: 0 3px 0 -1px $c-red;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding: vw(70px) vw(90px);
+
+    .b-schedule {
+      display: none;
+      margin-left: vw(50px);
+      margin-bottom: 0;
+
+      &__row {
+        flex-wrap: wrap;
+        margin-bottom: vw(40px);
+        &:last-child { margin-bottom: 0; }
+
+        .time,
+        .name { font-size: vw(18px); }
+
+        .name {
+          line-height: vw(27px);
+        }
+
+        .place {
+          margin-top: vw(6px);
+          flex: 0 0 100%;
+          margin-left: 0;
+          font-size: vw(15px);
+          color: rgba(#fff, .7);
+        }
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

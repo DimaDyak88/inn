@@ -17,4 +17,12 @@ class PagesController < ApplicationController
   def contacts
   end
 
+  def send_work
+    render layout: false
+  end
+
+  def festival_program
+    
+  end
+
 end

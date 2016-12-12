@@ -23,26 +23,12 @@ body {
   overflow-y: hidden;
   min-height: 100%;
 
-  &__content{
+  &__content {
     margin-left: $sidebar-width;
 
     @include media($tablet) {
       margin-left: 0;
     }
-  }
-
-  .fade-layout {
-    display: none;
-    z-index: 10;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background: rgba(#000, 0.7);
-
-    @include media($tablet) { display: none; }
-
   }
 }
 
@@ -88,6 +74,7 @@ body {
   &:after { right: vw(-80px); }
 
   > div {
+    margin-top: vw(8px);
     font-style: normal;
     @include font-set(vw(14px), vw(17px), $rubik-light);
     font-family: $rubik-font;

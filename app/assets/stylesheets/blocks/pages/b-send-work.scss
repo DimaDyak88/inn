@@ -1,0 +1,97 @@
+.b-send-work {
+  @include font-set(vw(13px), vw(15px), $rubik-light);
+  color: #000;
+
+
+  .form {
+    .title {
+      margin-bottom: vw(15px);
+      @include font-set(vw(24px), vw(32px), $rubik-light);
+    }
+
+    .close {
+      z-index: 1;
+      @include absolute(vw(12px) vw(12px) false false);
+      width: vw(14px);
+      height: vw(14px);
+      background: asset_data_url('icons/close.svg') no-repeat center / cover;
+      cursor: pointer;
+    }
+
+    &__inner {
+      padding: vw(30px) vw(40px);
+    }
+
+    .input {
+      margin-bottom: vw(15px);
+
+      label { color: #929292; }
+
+      input,
+      textarea {
+        color: #000;
+        box-shadow: 0 2px 0 -1px #929292;
+        resize: none;
+      }
+
+      textarea {
+        overflow-y: hidden;
+        padding-bottom: 0;
+        height: 52px;
+
+        &[name*='description'] {
+          @include font-set(vw(13px), vw(15px), $rubik-light);
+        }
+      }
+
+      &.selected {
+        label {
+          color: #000;
+
+          > abbr { color: $c-red; }
+        }
+
+        input,
+        textarea {
+          font-weight: $rubik-regular;
+          box-shadow: 0 3px 0 -1px #000;
+        }
+      }
+    }
+
+    .composite-input {
+      display: flex;
+      justify-content: flex-start;
+
+      .input {
+        &:last-child {
+          margin-right: vw(40px);
+          margin-left: vw(20px);
+        }
+      }
+    }
+
+    .tip {
+      margin-top: vw(-8px);
+      margin-bottom: vw(15px);
+      color: #929292;
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: vw(20px) vw(40px);
+      background: $c-red;
+      .note {
+        color: #fff;
+      }
+    }
+  }
+
+  .submit {
+    opacity: .3;
+    color: #fff;
+    border-color: #fff;
+  }
+}

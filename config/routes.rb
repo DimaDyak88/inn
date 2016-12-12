@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get :council
       get :map
       get :contacts
+      get :send_work
+      get :festival_program
     end
   end
 

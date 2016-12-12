@@ -1,8 +1,11 @@
-@import "global/layout";
-@import "global/map";
-
 @import "structures/g-button";
 @import "structures/placemark";
+
+@import "global/layout";
+@import "global/map";
+@import "global/popup";
+@import "global/form";
+
 
 @import "blocks/shared/b-footer";
 @import "blocks/shared/b-menu";
@@ -22,6 +25,8 @@
 @import "blocks/pages/b-council-single";
 @import "blocks/pages/b-jury";
 @import "blocks/pages/b-contacts";
+@import "blocks/pages/b-send-work";
+@import "blocks/pages/b-festival-program";
 
 
 @import "overloads/one-page-scroll";

@@ -1,4 +1,4 @@
-class ContactsForm
+class App.ContactsForm
   el: null
   $el: null
   emailValidatePattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -30,9 +30,29 @@ class ContactsForm
 
   onBlur: (event) ->
     $target = $(event.currentTarget)
-    inputValue = $target.find('input').val()
+    inputValue = $target.find('input, textarea').val()
     $target.removeClass('selected') if inputValue is ''
 
 
+
+
+
+class App.SendWorkForm extends App.ContactsForm
+  baseTextareaHeight: null
+  constructor: (el) ->
+    super(el)
+    @baseTextareaHeight = $('textarea').height()
+
+  bindEvents: ->
+    super()
+    @$el.on 'keyup', 'textarea', (event) => # по возможности сделать что бы не было лишнего отступа снизу
+      $target = $(event.currentTarget)
+      if $target.val() == ''
+        $target.height(@baseTextareaHeight)
+        return
+      $target.height('auto')
+      $target.height($target.get(0).scrollHeight);
+
+
 $ ->
-  new ContactsForm('.js-contacts-form')
+  new App.ContactsForm('.js-contacts-form')

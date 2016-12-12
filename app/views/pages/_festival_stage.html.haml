@@ -10,7 +10,7 @@
       .city Калиниград
 
     .send-work.action-section
-      = link_to 'Отправить фильм', '#', class: 'g-button bordered'
+      = link_to 'Отправить фильм', '#', class: 'g-button bordered js-link-to-popup', data: { url: send_work_pages_path }
       .info
         Приём конкурсных работ 
         %br
