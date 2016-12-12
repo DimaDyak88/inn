@@ -1,0 +1,150 @@
+.b-contacts {
+  padding: vw(50px) vw(75px);
+
+  .headline {
+    margin-bottom: vw(40px);
+  }
+
+  &__list {
+    margin-bottom: vw(55px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    &.column1,
+    &.column2 { flex: 0 0 30% }
+    &.column3 { flex: 0 0 40% }
+  }
+
+  &__item {
+    margin-bottom: vw(30px);
+
+    > .name {
+      margin-bottom: vw(10px);
+      @include font-set(vw(20px), vw(27px), $rubik-regular);
+    }
+
+    > .role {
+      margin-bottom: vw(10px);
+      @include font-set(vw(14px), vw(20px), $rubik-light);
+    }
+
+    > .email {
+      color: #D9222A;
+      text-decoration: underline;
+      &:hover { text-decoration: none; }
+
+    }
+
+    .column1 &:first-child {
+      margin-bottom: vw(62px);
+    }
+  }
+
+
+  &__volunteers {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    > .information {
+      flex: 0 0 42%;
+      margin-right: 10%;
+
+      > .text {
+        margin-bottom: vw(20px);
+        @include font-set(vw(15px), vw(22px), $rubik-light);
+      }
+      .need-know {
+        @include font-set(vw(20px), vw(24px), $rubik-regular);
+      }
+      > .list {
+        padding: 0;
+        margin: vw(20px) 0 0 vw(20px);
+
+        > li {
+          position: relative;
+          margin-top: vw(12px);
+          @include font-set(vw(14px), vw(20px), $rubik-light);
+
+          @include before {
+            z-index: 2;
+            @include absolute(vw(3px) false false vw(-20px));
+            width: vw(10px);
+            height: vw(10px);
+            background: asset_data_url('icons/list_star.svg') no-repeat center / cover;
+          }
+        }
+      }
+    }
+    
+    $unselected-color: rgba(#fff, .4);
+    $selected-color: rgba(#fff, 1);
+
+    > .form {
+      padding: vw(24px) vw(30px) vw(30px);
+      flex: 0 0 48%;
+      border: vw(3px) dashed rgba(#fff, .2);
+
+      > .input {
+        width: 100%;
+        margin-bottom: vw(30px);
+
+        > label {
+          z-index: 1;
+          position: absolute;
+          bottom: vw(8px);
+          color: $unselected-color;
+          @include font-set(vw(18px), vw(22px), $rubik-light);
+          transition: all .15s ease;
+        }
+
+        > input {
+          position: relative;
+          z-index: 2;
+          padding-top: vw(22px);
+          padding-bottom: vw(8px);
+          width: 100%;
+          @include font-set(vw(18px), vw(22px), $rubik-light);
+          border: none;
+          box-shadow: 0 1px 0 0 $unselected-color;
+          background: transparent;
+          outline: none;
+          color: #fff;
+        }
+
+        &.selected {
+          > label {
+            bottom: vw(38px);
+            font-size: vw(13px);
+            line-height: vw(15px);
+          }
+
+          > input {
+            box-shadow: 0 2px 0 0 $selected-color;
+          }
+        }
+      }
+
+      .submit {
+        pointer-events: none;
+        opacity: .5;
+        padding: vw(8px) vw(18px) vw(6px);
+        text-transform: uppercase;
+        border-width: 2px;
+        color: $c-red;
+        transition: all .15s ease;
+
+        &:hover { color: #fff; }
+      }
+
+      &.valid {
+        .submit {
+          pointer-events: auto;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

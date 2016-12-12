@@ -37,94 +37,9 @@
     }
   }
 
-  &__persons {
-    margin-left: vw(50px);
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-
-    @include media($tablet) {
-      margin-left: 30px;
-    }
-
-    @include media($mobile) {
-      margin-left: 0;
-      padding: 0 15px;
-    }
-  }
-
-  &__person {
-    flex: 0 0 25%;
-    margin-bottom: vw(-20px);
-    color: #000;
-
-    @include media($mobile) {
-      flex: 1 0 100%;
-      margin-bottom: 24px;
-
-      &:nth-child(4) {
-        order: 0 !important;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    > .image {
-      overflow: hidden;
-      width: vw(120px);
-      height: vw(120px);
-      border-radius: 50%;
-      background: image_url('fakes/person1.jpg') no-repeat center / cover;
-
-      @include media($tablet) {
-        width: 92px;
-        height: 92px;
-      }
-
-      @include media($mobile) {
-        float: left;
-        margin-right: 15px;
-        width: 64px;
-        height: 64px;
-      }
-    }
-
-    > .name {
-      width: 70%;
-      margin: vw(12px) 0 0 vw(10px);
-      font-family: $play-font;
-      @include font-set(vw(20px), vw(27px), $play-italic-bold);
-      font-style: italic;
-
-      @include media($tablet) {
-        width: 60%;
-        font-size: 16px;
-        line-height: 21px;
-      }
-
-      @include media($mobile) {
-        width: 100%;
-        margin-top: 0;
-      }
-    }
-
-    >.info {
-      margin: vw(8px) 0 0 vw(10px);
-      padding-right: vw(60px);
-      @include font-set(vw(14px), vw(20px), $rubik-light);
-
-      @include media($tablet) {
-        padding-right: 0;
-        font-size: 13px;
-        line-height: 19px;
-      }
-
-      @include media($mobile) {
-        margin-top: 5px;
-        overflow: hidden;
-      }
+  .b-members {
+    &__person {
+      margin-bottom: vw(-20px);
     }
   }
 }

@@ -1,0 +1,15 @@
+.b-jury {
+  padding: vw(50px) vw(50px) vw(50px) vw(60px);
+
+  .headline {
+    margin-bottom: vw(50px);
+  }
+  .b-members {
+    justify-content: flex-start;
+
+    &__person {
+      margin-bottom: vw(50px);
+      color: #fff;
+    }
+  }
+}

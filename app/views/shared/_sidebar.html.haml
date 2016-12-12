@@ -14,6 +14,7 @@
       .b-menu
         = link_to 'Анонс', '#', class: 'item'
         = sidebar_link_to 'Карта фестиваля', map_pages_path
+        = sidebar_link_to 'Жюри', jury_pages_path
         = link_to 'Регламент', '#', class: 'item'
         = link_to 'Аккредитация прессы', '#', class: 'item'
         = link_to 'Купить билет', '#', class: 'item buy-ticket'
@@ -25,7 +26,7 @@
       = sidebar_link_to 'Истории успеха', success_story_pages_path
 
     .b-menu
-      = link_to 'Контакты', '#', class: 'item'
+      = sidebar_link_to 'Контакты', contacts_pages_path
       = link_to 'Архив', '#', class: 'item'
 
 

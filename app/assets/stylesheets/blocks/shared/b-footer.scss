@@ -1,6 +1,6 @@
 .b-footer {
   margin: 0 vw(50px);
-  padding: vw(20px) 0 vw(40px);
+  padding: vw(20px) 0 vw(30px);
   border-top: vw(1px) solid rgba(#D8D8D8, .4);
   @include font-set(vw(16px), vw(19px), $rubik-light);
 
@@ -13,6 +13,13 @@
     margin: 0 15px;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .copyrights,
+  .years {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 0;
   }
 
   .years {
@@ -28,13 +35,11 @@
   }
 
   &.secondary {
-    padding-bottom: vw(30px);
+    padding: vw(20px) 0 vw(40px);
 
     .copyrights,
     .years {
-      display: inline-block;
-      vertical-align: bottom;
-      margin-top: 0;
+      display: block;
     }
   }
 }

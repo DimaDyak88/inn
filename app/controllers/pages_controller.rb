@@ -11,4 +11,10 @@ class PagesController < ApplicationController
   def map
   end
 
+  def jury
+  end
+
+  def contacts
+  end
+
 end

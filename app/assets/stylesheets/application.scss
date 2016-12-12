@@ -8,7 +8,7 @@
   @return ($px / $design-width) * 100vw;
 }
 
-@function vw($px) { @return $px; }
+//@function vw($px) { @return $px; }
 
 
 @import "base";

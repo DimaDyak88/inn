@@ -5,8 +5,10 @@
   outline: none;
   text-decoration: none;
   letter-spacing: vw(1.5px);
+  background: transparent;
   @include font-set(vw(20px), vw(27px), $rubik-bold);
   transition: background-color .15s ease;
+  cursor: pointer;
 
   @include media($tablet) {
     font-size: 18px;

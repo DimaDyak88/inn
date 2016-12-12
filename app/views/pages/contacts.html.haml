@@ -1,0 +1,67 @@
+.b-contacts
+  .headline
+    %b Контактная информация
+
+  .b-contacts__list
+    .b-contacts__column.column1
+      .b-contacts__item
+        .name Света Дрыга
+        .role Генеральный продюсер
+
+      .b-contacts__item
+        .name Артем Рыжков
+        .role Арт-директор, отборщик
+        = mail_to 'short@korochekino.com', 'short@korochekino.com', class: 'email'
+
+      .b-contacts__item
+        .name Иван Фисюк
+        .role Отдел PR
+        = mail_to 'press@korochekino.com', 'press@korochekino.com', class: 'email'
+
+    .b-contacts__column.column2
+      .b-contacts__item
+        .name Андрей Левченко
+        .role Продюсер
+        = mail_to 'info@korochekino.com', 'info@korochekino.com', class: 'email'
+
+      .b-contacts__item
+        .name Андрей Карачинов
+        .role Промоутер
+        = mail_to 'info@korochekino.com', 'info@korochekino.com', class: 'email'
+
+    .b-contacts__column.column3
+      .b-contacts__item
+        .name Адрес штаба Фестиваля
+        .role Россия, 236000 Калининград, ул. С.Колоскова 13/17, арт-пространство «Квартира» Телефон +7 4012 21-67-36
+        .email
+        = mail_to 'short@korochekino.com', 'short@korochekino.com', class: 'email'
+
+
+  .headline
+    %b Волонтерам
+
+  .b-contacts__volunteers
+    .information
+      .text
+        Если вы любите кино и вас привлекает возможность получить уникальный опыт и поучаствовать в организации крупнейшего зрительского кинофестиваля России, приглашаем вас зарегистрироваться.
+      .need-know
+        Что нужно знать о работе волонтера и какими умениями обладать:
+      %ul.list
+        %li Свободно владеть русским и английским языками;
+        %li Иметь возможность проживания в Калининграде в период 20–27 августа 2017 года для участия в образовательных тренингах и непосредственно в работе Фестиваля;
+        %li Рабочий день волонтера длится не более 5 часов.
+
+    = form_for :object, html: { class: 'form js-contacts-form' } do |f|
+      .input
+        = f.label :name, 'Имя Фамилия'
+        = f.text_field :name, class: 'js-contacts-form__name'
+      .input
+        = f.label :name, 'Электронная почта'
+        = f.text_field :email, class: 'js-contacts-form__email'
+      = f.submit 'Отправить', class: 'submit g-button bordered small'
+
+= render 'shared/footer'
+
+
+
+

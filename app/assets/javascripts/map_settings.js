@@ -1,4 +1,4 @@
-[
+window.MAP_STYLES = [
   {
     "elementType": "geometry",
     "stylers": [
@@ -179,7 +179,7 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#e1000a"
+        "color": "#BC000F"
       }
     ]
   },
@@ -192,4 +192,4 @@
       }
     ]
   }
-]
+];

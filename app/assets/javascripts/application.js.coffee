@@ -2,7 +2,9 @@
 #= require jquery_ujs
 #= require jquery.onepage-scroll
 #= require map
+#= require map_init
 #= require places_data
+#= require_tree ./views
 
 
 $ ->
@@ -33,5 +35,9 @@ $ ->
     });
 
 
-  if $('#map-holder').length
-    window.drawMarkers(placesData) # placesData from require places_data
+#  if $('#map-holder').length
+#    window.drawMarkers(placesData) # placesData from require places_data
+
+
+  if $('#map').length
+    window.draw(placesData, 'map');

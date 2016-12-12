@@ -4,6 +4,11 @@
 @import "structures/g-button";
 @import "structures/placemark";
 
+@import "blocks/shared/b-footer";
+@import "blocks/shared/b-menu";
+@import "blocks/shared/b-sidebar";
+@import "blocks/shared/b-members";
+
 @import "blocks/pages/festival_stage/b-festival-stage";
 @import "blocks/pages/festival_stage/b-name-place";
 @import "blocks/pages/festival_stage/b-schedule";
@@ -15,9 +20,8 @@
 @import "blocks/pages/b-quote";
 @import "blocks/pages/b-success-story";
 @import "blocks/pages/b-council-single";
+@import "blocks/pages/b-jury";
+@import "blocks/pages/b-contacts";
 
-@import "blocks/shared/b-footer";
-@import "blocks/shared/b-menu";
-@import "blocks/shared/b-sidebar";
 
 @import "overloads/one-page-scroll";

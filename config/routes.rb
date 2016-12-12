@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   root 'pages#index'
-
   resources :pages, only: [:index] do
-    get 'list', on: :collection
-    get 'success_story', on: :collection
-    get 'council', on: :collection
-    get 'map', on: :collection
+    collection do
+      get :list
+      get :success_story
+      get :jury
+      get :council
+      get :map
+      get :contacts
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
