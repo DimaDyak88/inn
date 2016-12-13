@@ -22,7 +22,9 @@ class PagesController < ApplicationController
   end
 
   def festival_program
-    
+  end
+
+  def about_festival
   end
 
 end

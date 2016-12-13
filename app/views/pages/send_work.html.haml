@@ -1,58 +1,24 @@
 .b-send-work
-  = form_for :object, html: { class: 'form js-contacts-form' } do |f|
+  = simple_form_for :send_work, default: { required: true}, html: { class: 'form js-contacts-form' } do |f|
     .form__inner
       .title Форма заявки на участие  в фестивале
       .close.js-close
-      .input
-        = f.label :name, "Название фильма#{'<abbr>*</abbr>'}".html_safe
-        = f.text_field :name, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, "Режиссёр#{'<abbr>*</abbr>'}".html_safe
-        = f.text_field :name, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, "В ролях#{'<abbr>*</abbr>'}".html_safe
-        = f.text_area :email, class: 'js-contacts-form__name'
-
+      = f.input :name, label: 'Название фильма'
+      = f.input :name, label: 'Режисер'
+      = f.input :name, as: :text, label: 'В ролях'
       .composite-input
-        .input
-          = f.label :name, "Год производства#{'<abbr>*</abbr>'}".html_safe
-          = f.text_field :email, class: 'js-contacts-form__name'
-
-        .input
-          = f.label :name, "Хронометраж#{'<abbr>*</abbr>'}".html_safe
-          = f.text_field :email, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, 'Город'
-        = f.text_field :email, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, "Описание#{'<abbr>*</abbr>'}".html_safe
-        = f.text_area :description, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, 'Участие в други фестивалях'
-        = f.text_field :email, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, "Ссылка для скачивания файла#{'<abbr>*</abbr>'}".html_safe
-        = f.text_field :email, class: 'js-contacts-form__name'
+        = f.input :name, label: 'Год производства'
+        = f.input :name, label: 'Хронометраж'
+      = f.input :name, label: 'Город'
+      = f.input :description, as: :text, label: 'Описание'
+      = f.input :name, label: 'Участие в других фестивалях', required: false
+      .g-checkbox
+        = f.input :premiere, as: :boolean, boolean_style: :inline, label: 'Премьера', wrapper: false
+      = f.input :name, label: 'Ссылка для скачивания файла'
       .tip Выложите файл на любой удобный вам файлообменный сервис и укажите ссылку на него.
-
-      .input
-        = f.label :name, 'Дополнительная информация'
-        = f.text_field :email, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, 'Откуда вы узнали о нас'
-        = f.text_field :email, class: 'js-contacts-form__name'
-
-      .input
-        = f.label :name, "Электронная почта#{'<abbr>*</abbr>'}".html_safe
-        = f.text_field :email, class: 'js-contacts-form__name'
-
+      = f.input :name, label: 'Дополнительная информация', required: false
+      = f.input :name, label: 'Откуда вы узнали о нас', required: false
+      = f.input :email, label: 'Электронная почта', input_html: { class: 'js-email' }
     .form__bottom
       = f.submit 'Отправить', class: 'submit g-button bordered small'
-      .note Заполните все поля, отмеченные *
+      .note.js-require-note Заполните все поля, отмеченные *

@@ -24,7 +24,7 @@
         }
 
         &.active {
-          box-shadow: 0 3px 0 -1px $c-red;
+          box-shadow: inset 0 -3px 0 -1px $c-red;
           cursor: default;
         }
       }

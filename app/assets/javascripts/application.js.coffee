@@ -1,11 +1,14 @@
+#= require underscore
 #= require jquery
 #= require jquery_ujs
 #= require jquery.onepage-scroll
+
 #= require map
 #= require map_init
 #= require places_data
 #= require_self
-#= require_tree ./views
+#= require_tree ./form
+#= require ./festval-program-tabs
 
 
 window.App = {}
@@ -28,7 +31,6 @@ $ ->
       state = 'close'
 
 
-
   if $('.b-success-story').length > 0
     $(".main").onepage_scroll({
       loop: false,
@@ -36,7 +38,6 @@ $ ->
       animationTime: 650,
       keyboard: false
     });
-
 
 
   $('.js-link-to-popup').on 'click', (event) ->
@@ -57,14 +58,5 @@ $ ->
 
   if $('#map').length
     window.draw(placesData, 'map');
-
-
-
-  $schedules = $('.b-festival-program__content').find('.b-schedule')
-  $('.js-days-list').on 'click', '.days-list__item', (event) ->
-    $target = $(event.currentTarget)
-    num = $target.index() - 1
-    $target.addClass('active').siblings().removeClass 'active'
-    $schedules.hide().eq(num).fadeIn(200)
 
 

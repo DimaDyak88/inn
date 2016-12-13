@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get :contacts
       get :send_work
       get :festival_program
+      get :about_festival
     end
   end
 

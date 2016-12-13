@@ -1,0 +1,31 @@
+.g-checkbox {
+  overflow: hidden;
+  user-select: none;
+
+  > label {
+    position: relative;
+    padding-left: vw(30px);
+    @include font-set(vw(16px), vw(20px), $rubik-light);
+    color: #000;
+
+    @include before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: vw(18px);
+      height: vw(18px);
+      background: asset_data_url('icons/checkbox_default.svg') no-repeat center / cover;
+      cursor: pointer;
+    }
+  }
+
+  > input[type=checkbox] {
+    position: absolute;
+    left: -1000px;
+    z-index: -1;
+
+    &:checked + label:before {
+      background-image: asset_data_url('icons/checkbox_checked.svg');
+    }
+  }
+}

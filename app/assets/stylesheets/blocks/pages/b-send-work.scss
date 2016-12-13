@@ -1,9 +1,13 @@
 .b-send-work {
+  @include absolute(0 0 0 0);
+
   @include font-set(vw(13px), vw(15px), $rubik-light);
   color: #000;
 
 
   .form {
+    @include absolute(0 0 0 0);
+
     .title {
       margin-bottom: vw(15px);
       @include font-set(vw(24px), vw(32px), $rubik-light);
@@ -19,13 +23,21 @@
     }
 
     &__inner {
+      overflow-y: auto;
+      @include absolute(0 0 vw(75px) 0);
       padding: vw(30px) vw(40px);
+    }
+
+    .g-checkbox {
+      margin: vw(15px) 0;
     }
 
     .input {
       margin-bottom: vw(15px);
 
-      label { color: #929292; }
+      label {
+        color: #929292;
+      }
 
       input,
       textarea {
@@ -37,7 +49,7 @@
       textarea {
         overflow-y: hidden;
         padding-bottom: 0;
-        height: 52px;
+        height: vw(52px);
 
         &[name*='description'] {
           @include font-set(vw(13px), vw(15px), $rubik-light);
@@ -78,14 +90,21 @@
     }
 
     &__bottom {
+      z-index: 2;
+      @include absolute(false 0 0 0);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: vw(20px) vw(40px);
       background: $c-red;
+
       .note {
         color: #fff;
       }
+    }
+
+    &.valid {
+      .note { display: none; }
     }
   }
 

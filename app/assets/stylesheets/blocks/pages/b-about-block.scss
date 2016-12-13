@@ -1,0 +1,67 @@
+.b-about-block {
+  padding: vw(45px) vw(60px) vw(30px);
+  background: #fff;
+  color: #000;
+
+  @include media($tablet) {
+    padding: 30px;
+  }
+
+  @include media($mobile) {
+    padding: 30px 15px;
+  }
+
+  .headline {
+    margin-bottom: vw(40px);
+
+    @include media($tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    @include media($mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .about {
+    width: 70%;
+    @include font-set(vw(24px), vw(32px), $rubik-light);
+
+    @include media($tablet) {
+      width: 65%;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include media($mobile) {
+      flex: 1 0 100%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .description {
+    width: 70%;
+    margin: vw(40px) vw(35px) 0 0;
+    @include font-set(vw(15px), vw(22px), $rubik-light);
+
+    @include media($tablet) {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @include media($mobile) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

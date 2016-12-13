@@ -1,5 +1,6 @@
 @import "structures/g-button";
 @import "structures/placemark";
+@import "structures/g-checkbox";
 
 @import "global/layout";
 @import "global/map";
@@ -15,7 +16,7 @@
 @import "blocks/pages/festival_stage/b-festival-stage";
 @import "blocks/pages/festival_stage/b-name-place";
 @import "blocks/pages/festival_stage/b-schedule";
-@import "blocks/pages/b-about-festival";
+@import "blocks/pages/b-about-block";
 @import "blocks/pages/b-council";
 @import "blocks/pages/b-news";
 @import "blocks/pages/b-partners";
@@ -27,6 +28,7 @@
 @import "blocks/pages/b-contacts";
 @import "blocks/pages/b-send-work";
 @import "blocks/pages/b-festival-program";
+@import "blocks/pages/b-about-festival";
 
 
 @import "overloads/one-page-scroll";

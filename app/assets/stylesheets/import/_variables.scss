@@ -20,9 +20,15 @@ $sidebar-indent: 30px;
 $design-width: 1280px;
 //$design-width: 1400px;
 
-$tablet-width: 895px;
-$mobile-width: 624px;
-$mobile-width: 600px;
+//$tablet-width: 895px;
+//$mobile-width: 624px;
+//$mobile-width: 600px;
+//$scroll-width: 17px;
+
+// disable tablet mobile
+$tablet-width: 1px;
+$mobile-width: 1px;
+$mobile-width: 1px;
 $scroll-width: 17px;
 
 $tablet: max-width $tablet-width + $scroll-width;

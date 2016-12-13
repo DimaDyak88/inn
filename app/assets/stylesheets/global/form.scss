@@ -9,11 +9,15 @@ $selected-color: rgba(#fff, 1);
     > label {
       z-index: 1;
       position: absolute;
-      //bottom: vw(8px);
       top: vw(22px);
       color: $unselected-color;
       @include font-set(vw(18px), vw(22px), $rubik-light);
       transition: all .15s ease;
+
+      > abbr {
+        float: right;
+        text-decoration: none;
+      }
     }
 
     > input,
@@ -34,7 +38,6 @@ $selected-color: rgba(#fff, 1);
     &.selected {
       > label {
         top: 0;
-        //bottom: vw(38px);
         font-size: vw(13px);
         line-height: vw(15px);
       }
@@ -52,7 +55,6 @@ $selected-color: rgba(#fff, 1);
     text-transform: uppercase;
     border-width: 2px;
     color: $c-red;
-    transition: all .15s ease;
 
     &:hover { color: #fff; }
   }
@@ -61,6 +63,12 @@ $selected-color: rgba(#fff, 1);
     .submit {
       pointer-events: auto;
       opacity: 1;
+    }
+  }
+
+  &.hide-required {
+    label {
+      > abbr { display: none; }
     }
   }
 }

@@ -55,3 +55,36 @@
     &:hover { background: transparent; }
   }
 }
+
+
+
+.g-reglament-button {
+  display: flex;
+  align-items: center;
+  width: vw(174px);
+  height: vw(60px);
+  margin-top: vw(12px);
+  padding: 0 vw(20px);
+  background: $c-red;
+  box-shadow: 0 vw(10px) vw(20px) rgba(#EB4353, .4);
+
+  @include media($mobile) {
+    margin-top: 20px;
+  }
+
+  > .icon {
+    flex: 1 0 vw(27px);
+    height: vw(30px);
+    margin-right: vw(20px);
+    background: asset_data_url('icons/reglament_download.svg') no-repeat center / cover;
+  }
+
+  > span {
+    @include font-set(vw(16px), vw(19px), $rubik-regular);
+    color: #fff;
+
+    @include media($tablet) {
+      font-size: 15px;
+    }
+  }
+}

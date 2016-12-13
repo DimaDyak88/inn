@@ -1,98 +1,74 @@
 .b-about-festival {
-  padding: vw(45px) vw(60px) vw(30px);
-  background: #fff;
-  color: #000;
 
-  @include media($tablet) {
-    padding: 30px;
-  }
+  p { margin-top: 0; }
 
-  @include media($mobile) {
-    padding: 30px 15px;
-  }
+  &__top {
+    .bottom {
+      justify-content: flex-start;
+      margin-bottom: vw(30px);
 
-  .headline {
-    margin-bottom: vw(40px);
-
-    @include media($tablet) {
-      margin-bottom: 30px;
-    }
-  }
-
-  .top {
-    display: flex;
-    justify-content: space-between;
-
-    @include media($mobile) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  .about {
-    width: 70%;
-    @include font-set(vw(24px), vw(32px), $rubik-light);
-
-    @include media($tablet) {
-      width: 65%;
-      font-size: 18px;
-      line-height: 24px;
+       .description {
+         flex: 1 0 auto;
+         margin-left: vw(150px);
+       }
     }
 
-    @include media($mobile) {
-      flex: 1 0 100%;
-    }
-  }
-
-  .reglament {
-    display: flex;
-    align-items: center;
-    width: vw(174px);
-    height: vw(60px);
-    margin-top: vw(12px);
-    padding: 0 vw(20px);
-    background: $c-red;
-    box-shadow: 0 vw(10px) vw(20px) rgba(#EB4353, .4);
-
-    @include media($mobile) {
-      margin-top: 20px;
-    }
-
-    > .icon {
-      flex: 1 0 vw(27px);
-      height: vw(30px);
-      margin-right: vw(20px);
-      background: asset_data_url('icons/reglament_download.svg') no-repeat center / cover;
-    }
-
-    > span {
-      @include font-set(vw(16px), vw(19px), $rubik-regular);
-      color: #fff;
-
-      @include media($tablet) {
-        font-size: 15px;
+    .with-image {
+      .image {
+        width: vw(150px);
+        padding-top: 22%;
+        float: right;
+        background: image_url('b-about/kaliningrad.svg') no-repeat center;
+        background-size: 100% 100%;
+      }
+      .about { width: 85%; }
+      .description {
+        padding-right: 10%;
       }
     }
   }
 
-  .bottom {
-    display: flex;
-    justify-content: flex-end;
-  }
+  &__bottom {
+    padding: vw(80px) vw(60px) vw(80px) vw(50px);
+    background: #1A1A1A;
 
-  .description {
-    width: 70%;
-    margin: vw(40px) vw(35px) 0 0;
-    @include font-set(vw(15px), vw(22px), $rubik-light);
-
-    @include media($tablet) {
-      margin-top: 30px;
-      font-size: 14px;
+    .headline {
+      margin-bottom: vw(40px);
     }
 
-    @include media($mobile) {
-      width: 100%;
-      margin-right: 0;
+    .cinema-info {
+      overflow: hidden;
+      @include font-set(vw(24px), vw(32px), $rubik-light);
+
+      .image {
+        float: right;
+        margin-left: vw(80px);
+        width: vw(174px);
+        padding-top: 27%;
+        background: image_url('b-about/poster.png') no-repeat center / contain;
+      }
+    }
+
+    .trailer {
+      .title {
+        margin-bottom: vw(30px);
+        font-family: $play-font;
+        @include font-set(vw(24px), vw(32px), $play-italic-black);
+        font-style: italic;
+      }
+
+      .video {
+        width: 72%;
+        padding-top: 42%;
+
+        > iframe {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 }

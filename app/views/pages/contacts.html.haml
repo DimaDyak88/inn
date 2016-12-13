@@ -51,13 +51,9 @@
         %li Иметь возможность проживания в Калининграде в период 20–27 августа 2017 года для участия в образовательных тренингах и непосредственно в работе Фестиваля;
         %li Рабочий день волонтера длится не более 5 часов.
 
-    = form_for :object, html: { class: 'form js-contacts-form' } do |f|
-      .input
-        = f.label :name, 'Имя Фамилия'
-        = f.text_field :name, class: 'js-contacts-form__name'
-      .input
-        = f.label :name, 'Электронная почта'
-        = f.text_field :email, class: 'js-contacts-form__email'
+    = simple_form_for :object, default: { required: true }, html: { class: 'form js-contacts-form hide-required' } do |f|
+      = f.input :name, label: 'Имя Фамилия'
+      = f.input :email, label: 'Электронная почта', input_html: { class: 'js-email' }
       = f.submit 'Отправить', class: 'submit g-button bordered small'
 
 = render 'application/footer'
