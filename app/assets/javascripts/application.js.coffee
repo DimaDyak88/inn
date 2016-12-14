@@ -59,5 +59,19 @@ $ ->
   if $('#map').length
     window.draw(placesData, 'map');
 
+  count = 0
+
+  insert = ->
+    count += 1
+    condition = Math.random() < 0.5
+    height = if condition then 120 else 240
+    url = "http://loremflickr.com/155/#{height}?random=#{count}"
+    $('.js-gallery-list').append("<img src=#{url} />")
+
+  insert() for [1..17]
+
+
+
+
 
 
