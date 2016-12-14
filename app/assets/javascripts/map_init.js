@@ -1,3 +1,5 @@
+//= require ./utils/handlebars-helpers
+
 window.draw = function(markersData, mapId) {
   var mapOptions = {
     center: new google.maps.LatLng(54.710303, 20.510784),
@@ -10,26 +12,31 @@ window.draw = function(markersData, mapId) {
 
   var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
 
-  var infowindow = new google.maps.InfoWindow;
+  var infowindow = new google.maps.InfoWindow();
+
+  var source = $('#map-popover').html();
+  var popoverTemplate = Handlebars.compile(source);
 
   if (markersData) {
     markersData.forEach(function(markerData, index) {
       if (markerData.lat === undefined || markerData.lon === undefined) { return }
 
-      var popoverContent = '<div class="map-popover">'+
-        '<div class="image">' +
-        '<img src=' + markerData.pic_url + '>' +
-        '</div>' +
-        '<div class="name"><a href='+ markerData.url +'>' + markerData.name + '</a></div>' +
-        '<div class="address">' + markerData.address + '</div>' +
-        '<div class="close"></div>' +
-        '</div>';
+      var popoverContent = popoverTemplate({
+        title: markerData.name,
+        address: markerData.address,
+        url: markerData.url,
+        description: markerData.name,
+        pic_url: markerData.pic_url
+      });
+
+      console.log (popoverContent)
 
       var markerParams = {
         map: map,
         position: new google.maps.LatLng(markerData.lat, markerData.lon),
         icon: window.MARKER_ICONS[markerData.type]
       };
+
 
       var marker = new google.maps.Marker(markerParams);
 

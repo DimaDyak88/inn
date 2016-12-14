@@ -4,16 +4,62 @@
 }
 
 .map-popover {
+  user-select: none;
   overflow: hidden;
-  width: vw(400px);
-
+  display: flex;
+  width: 400px;
+  height: 220px;
   color: #000;
+  background: #fff;
+
+  .close {
+    position: absolute;
+    z-index: 2;
+    top: vw(18px);
+    right: vw(18px);
+    width: vw(14px);
+    height: vw(14px);
+    background: asset_data_url('icons/close.svg') no-repeat center / cover;
+    cursor: pointer;
+  }
 
   .image {
-    width: vw(150px);
-    float: left;
-    > img {
-      width: 100%;
+    flex: 0 0 150px;
+    height: 100%;
+    background: red;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    padding: vw(18px) vw(20px) vw(16px);
+
+    .title {
+      padding-right: vw(20px);
+      margin-bottom: vw(10px);
+      font-family: $play-font;
+      font-style: italic;
+      @include font-set(vw(20px), vw(27px), $play-italic-black);
+    }
+
+    .address {
+      @include font-set(vw(15px), vw(22px), $rubik-light);
+    }
+
+    .link {
+      flex: 1 0 0;
+      > a {
+        @include font-set(vw(15px), vw(22px), $rubik-light);
+        text-decoration: underline;
+        color: $c-red;
+        &:hover { text-decoration: none; }
+      }
+    }
+
+    .description {
+      @include font-set(vw(14px), vw(22px), $rubik-light);
+      color: rgba(#000, .6);
     }
   }
 }

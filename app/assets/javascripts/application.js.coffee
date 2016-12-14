@@ -2,6 +2,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require jquery.onepage-scroll
+#= require handlebars
 
 #= require map
 #= require map_init
@@ -9,7 +10,6 @@
 #= require_self
 #= require_tree ./form
 #= require ./festval-program-tabs
-
 
 window.App = {}
 
@@ -58,5 +58,6 @@ $ ->
 
   if $('#map').length
     window.draw(placesData, 'map');
+
 
 

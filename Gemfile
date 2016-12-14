@@ -48,3 +48,4 @@ gem 'quiet_assets', group: :development
 gem 'autoprefixer-rails'
 gem 'rails-assets-underscore', source: 'https://rails-assets.org'
 
+gem 'rails-assets-handlebars', source: 'https://rails-assets.org'

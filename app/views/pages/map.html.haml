@@ -1,6 +1,17 @@
 %script{ :src => "//maps.googleapis.com/maps/api/js?key=AIzaSyDERj8Bgb_YESd8JVXKMi6PH6xWgIUhTU4"}
 
--##map-holder
+%script#map-popover{:type => "text/x-handlebars-template"}
+  .map-popover
+    -#.close
+    .image
+      {{{ image pic_url }}}
+    .info
+      .title
+        {{ title }}
+      .address
+        {{ address }}
+      {{{ wrappedLink url }}}
+      .description
+        {{ description }}
 
 #map
-
