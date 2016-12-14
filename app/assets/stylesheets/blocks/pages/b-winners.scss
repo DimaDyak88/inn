@@ -1,0 +1,129 @@
+$first: #34131A;
+$second: #243025;
+$third: #002C35;
+
+.b-winners {
+  padding: vw(50px) 0 vw(10px);
+
+  .headline {
+    > div { letter-spacing: vw(2px); }
+  }
+
+  &__awards {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 34%;
+      padding: vw(35px) vw(40px);
+      text-align: center;
+
+      @include before {
+        display: block;
+        width: vw(24px);
+        height: vw(30px);
+        margin: 0 auto vw(15px);
+        background: asset_data_url('b-winners/cup.svg') no-repeat center / cover;
+      }
+
+      .head {
+        flex: 0 0 110px;
+        font-family: $play-font;
+        font-style: italic;
+        @include font-set(vw(24px), vw(32px), $play-italic-bold);
+        letter-spacing: 1px;
+      }
+
+      .movie {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        > .name {
+          flex: 1 0 0;
+          margin-bottom: vw(10px);
+        }
+      }
+
+      .name { @include font-set(vw(20px), vw(24px), $rubik-regular); }
+
+      .person {
+        @include font-set(vw(14px), vw(20px), $rubik-light);
+        opacity: .6;
+      }
+
+      &:nth-child(1) { background: $first; }
+      &:nth-child(2) { background: $second; }
+      &:nth-child(3) { background: $third; }
+    }
+
+    &.best-film {
+      justify-content: center;
+      margin-bottom: vw(24px);
+
+      .b-winners__awards-item {
+        background: transparent;
+
+        @include before {
+          width: vw(69px);
+          height: vw(47px);
+          margin: 0 auto vw(20px);
+          background-image: asset_data_url('b-winners/cup_best.svg');
+        }
+
+        .head {
+          flex: 1 0 0;
+          font-size: vw(30px);
+          line-height: vw(32px);
+        }
+
+        .name {
+          margin: vw(20px) 0 vw(10px);
+          font-size: vw(24px);
+          line-height: vw(32px);
+        }
+
+        .person {
+          font-size: vw(20px);
+          line-height: vw(24px);
+        }
+      }
+    }
+
+    &.special {
+      .b-winners__awards-item {
+        .head { flex: initial; }
+
+        .film {
+          margin-top: vw(20px);
+
+          @include before {
+            display: block;
+            width: vw(40px);
+            height: vw(10px);
+            margin: auto;
+            background: asset_data_url('b-winners/film_stars.svg') no-repeat center / contain;
+          }
+
+          .with-wording {
+            margin-top: vw(10px);
+            font-family: $play-font;
+            font-style: italic;
+            @include font-set(vw(18px), vw(24px), $play-italic);
+          }
+
+          .name { margin: vw(10px) 0 vw(5px); }
+        }
+
+        &:nth-child(1) { background: #000; }
+        &:nth-child(2) { background: $first; }
+      }
+    }
+  }
+
+  & + .b-footer {
+    border-top: 0;
+  }
+}

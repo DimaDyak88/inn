@@ -8,9 +8,13 @@ Rails.application.routes.draw do
       get :council
       get :map
       get :contacts
-      get :send_work
+      get :send_work #popup
       get :festival_program
       get :about_festival
+      get :accreditation
+      get :partners
+      get :winners
+      get :photo_gallery
     end
   end
 

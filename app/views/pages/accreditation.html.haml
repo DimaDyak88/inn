@@ -1,0 +1,57 @@
+.b-accreditation
+  .headline
+    %b Аккредитация прессы
+
+  .b-accreditation__content
+    .information
+      .main-text
+        Для получения аккредитации на фестиваль «Короче», отправьте заявку по электронной почте
+        = mail_to 'press@korochekino.com', 'press@korochekino.com'
+        или заполните форму на сайте.
+      %p.text Аккредитованные журналисты получают возможность посещения фестиваля и проходящих в его рамках мастер-классов во все дни мероприятия, бейдж прессы, информационные материалы мероприятия, каталог. Аккредитация предоставляется при условии обязательной публикации, демонстрации ТВ сюжета и т.д. с обязательным упоминанием названия фестиваля «Короче».
+      %p.text Аккредитованные журналисты в обязательном порядке предоставляют нам копии опубликованных материалов/сюжетов о фестивале и всех мероприятий, проходящих в рамках фестиваля «Короче».
+      %p.text
+        Заявку на аккредитацию нужно подать до 
+        %b 1 августа 2017 года.
+
+    .participation
+      = simple_form_for :accreditation, default: { required: true },
+        html: {class: 'form js-accreditation-form'} do |f|
+        .title Заявка на аккредитацию
+        = f.input :name, label: 'Название СМИ'
+        .checkbox-group
+          .left-column
+            .g-checkbox.secondary
+              = f.input :agency, as: :boolean,
+                boolean_style: :inline, label: 'Информационное агентство', wrapper: false
+            .g-checkbox.secondary
+              = f.input :web_smi, as: :boolean,
+                boolean_style: :inline, label: 'Интернет-издание', wrapper: false
+            .g-checkbox.secondary
+              = f.input :news_paper, as: :boolean,
+                boolean_style: :inline, label: 'Газета', wrapper: false
+            .g-checkbox.secondary
+              = f.input :magazine, as: :boolean,
+                boolean_style: :inline, label: 'Журнал', wrapper: false
+
+          .right-column
+            .g-checkbox.secondary
+              = f.input :radio, as: :boolean,
+                boolean_style: :inline, label: 'Радио', wrapper: false
+            .g-checkbox.secondary
+              = f.input :tv, as: :boolean,
+                boolean_style: :inline, label: 'Телевидение', wrapper: false
+            .g-checkbox.secondary
+              = f.input :another, as: :boolean,
+                boolean_style: :inline, label: 'Другое', wrapper: false
+
+        = f.input :phone, label: 'Контактный телефон'
+        = f.input :email, label: 'Электронная почта', input_html: { class: 'js-email' }
+        = f.input :site, label: 'Веб сайт', required: false
+        = f.input :contact, label: 'Контактное лицо'
+        = f.input :press_name, label: 'ФИО журналистов на аккредитацию', required: false
+        .form__bottom
+          = f.submit 'Отправить', class: 'submit g-button bordered small'
+          .note-require.js-require-note Заполните все поля, отмеченные *
+
+= render 'application/footer'

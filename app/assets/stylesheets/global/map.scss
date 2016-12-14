@@ -7,8 +7,8 @@
   user-select: none;
   overflow: hidden;
   display: flex;
-  width: 400px;
-  height: 220px;
+  width: vw(400px);
+  //height: 220px;
   color: #000;
   background: #fff;
 
@@ -44,16 +44,14 @@
     }
 
     .address {
-      @include font-set(vw(15px), vw(22px), $rubik-light);
+      @include font-set(15px, 22px, $rubik-light);
     }
 
     .link {
       flex: 1 0 0;
       > a {
         @include font-set(vw(15px), vw(22px), $rubik-light);
-        text-decoration: underline;
-        color: $c-red;
-        &:hover { text-decoration: none; }
+        @include hover-link($c-red);
       }
     }
 

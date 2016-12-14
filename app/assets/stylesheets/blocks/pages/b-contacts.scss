@@ -31,9 +31,7 @@
     }
 
     > .email {
-      color: #D9222A;
-      text-decoration: underline;
-      &:hover { text-decoration: none; }
+      @include hover-link(#D9222A);
 
     }
 
@@ -80,8 +78,8 @@
     }
 
     > .form {
-      padding: vw(24px) vw(30px) vw(30px);
       flex: 0 0 48%;
+      padding: vw(24px) vw(30px) vw(30px);
       border: vw(3px) dashed rgba(#fff, .2);
     }
   }

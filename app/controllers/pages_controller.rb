@@ -27,4 +27,15 @@ class PagesController < ApplicationController
   def about_festival
   end
 
+  def accreditation
+  end
+
+  def partners
+  end
+
+  def winners
+  end
+
+  def photo_gallery
+  end
 end

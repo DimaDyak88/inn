@@ -1,5 +1,6 @@
-.b-partners
-  .headline Партнеры
+.b-partners.stand-alone
+  .headline
+    %b Пратнеры фестиваля
 
   .b-partners__list
     = link_to '' do
@@ -25,3 +26,22 @@
       = image_tag 'b-partners/gazeta.svg'
     = link_to '' do
       = image_tag 'b-partners/hello.svg'
+
+    = link_to '' do
+      = image_tag 'b-partners/spletnik.svg'
+
+    = link_to '' do
+      = image_tag 'b-partners/kinoafisha.svg'
+
+    = link_to '' do
+      = image_tag 'b-partners/hollywood.svg'
+
+    = link_to '' do
+      = image_tag 'b-partners/amediateka.svg'
+
+    = link_to '' do
+      = image_tag 'b-partners/cinepromo.svg'
+
+  .become-partner.g-button.bordered.small Стать партнером
+
+= render 'application/footer'

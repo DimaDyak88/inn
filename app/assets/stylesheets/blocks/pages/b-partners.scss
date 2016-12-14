@@ -38,8 +38,12 @@
       margin-bottom: 20px;
     }
 
-    > img {
+    > a {
+      opacity: .5;
       margin: 0 vw(25px);
+      transition: opacity .3s ease;
+
+      &:hover { opacity: 1; }
 
       @include media($tablet) {
         margin: 0 12px;
@@ -50,11 +54,40 @@
       }
     }
 
+    .stand-alone & {
+      justify-content: space-between;
+
+      > a {
+        flex: 0 0 20%;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
     &.info-partners {
-      > img {
+      > a {
         margin-right: vw(30px);
         margin-left: vw(30px);
       }
+
+      .stand-alone & {
+        margin-bottom: vw(15px);
+
+        > a {
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: vw(45px);
+        }
+      }
     }
+  }
+
+  &.stand-alone {
+    padding: vw(50px) vw(100px) vw(70px);
+  }
+
+  .become-partner {
+    display: table;
+    margin: auto;
   }
 }

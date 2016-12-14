@@ -17,14 +17,16 @@
         = sidebar_link_to 'Карта фестиваля', map_pages_path
         = sidebar_link_to 'Жюри', jury_pages_path
         = link_to 'Регламент', '#', class: 'item'
-        = link_to 'Аккредитация прессы', '#', class: 'item'
+        = sidebar_link_to 'Аккредитация прессы', accreditation_pages_path
+        = sidebar_link_to 'Победители', winners_pages_path
+        = sidebar_link_to 'Фотогаллерея', photo_gallery_pages_path
         = link_to 'Купить билет', '#', class: 'item buy-ticket'
 
     .b-menu
       = sidebar_link_to 'О фестивале', about_festival_pages_path
       = sidebar_link_to 'Попечительский совет', council_pages_path
       = link_to 'Зрителям', '#', class: 'item'
-      = link_to 'Партнеры', '#', class: 'item'
+      = sidebar_link_to 'Партнеры', partners_pages_path
       = sidebar_link_to 'Истории успеха', success_story_pages_path
 
     .b-menu

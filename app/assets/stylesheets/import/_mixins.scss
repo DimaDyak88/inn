@@ -19,3 +19,11 @@
     font-weight: $font-weight;
   }
 }
+
+@mixin hover-link($color: inherit) {
+  color: $color;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}

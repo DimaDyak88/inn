@@ -4,8 +4,8 @@
 
   > label {
     position: relative;
-    padding-left: vw(30px);
-    @include font-set(vw(16px), vw(20px), $rubik-light);
+    padding-left: vw(25px);
+    @include font-set(vw(15px), vw(20px), $rubik-light);
     color: #000;
 
     @include before {
@@ -26,6 +26,16 @@
 
     &:checked + label:before {
       background-image: asset_data_url('icons/checkbox_checked.svg');
+    }
+  }
+
+  &.secondary {
+    > label {
+      color: rgba(#fff, .6);
+
+      @include before {
+        background-image: asset_data_url('icons/checkbox_secondary_default.svg');
+      }
     }
   }
 }

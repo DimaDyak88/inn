@@ -97,14 +97,6 @@
       align-items: center;
       padding: vw(20px) vw(40px);
       background: $c-red;
-
-      .note {
-        color: #fff;
-      }
-    }
-
-    &.valid {
-      .note { display: none; }
     }
   }
 

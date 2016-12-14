@@ -16,3 +16,7 @@ class App.SendWorkForm extends App.ContactsForm
         return
       $target.height('auto')
       $target.height($target.get(0).scrollHeight)
+
+
+$ ->
+  new App.SendWorkForm('.js-accreditation-form')

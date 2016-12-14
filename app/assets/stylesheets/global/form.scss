@@ -48,6 +48,16 @@ $selected-color: rgba(#fff, 1);
     }
   }
 
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .note-require {
+      @include font-set(vw(13px), vw(15px), $rubik-light);
+      color: #fff;
+    }
+  }
+
   .submit {
     pointer-events: none;
     opacity: .5;
@@ -55,7 +65,6 @@ $selected-color: rgba(#fff, 1);
     text-transform: uppercase;
     border-width: 2px;
     color: $c-red;
-
     &:hover { color: #fff; }
   }
 
@@ -64,7 +73,10 @@ $selected-color: rgba(#fff, 1);
       pointer-events: auto;
       opacity: 1;
     }
+
+    .note-require { display: none; }
   }
+
 
   &.hide-required {
     label {

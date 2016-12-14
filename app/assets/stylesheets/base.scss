@@ -7,7 +7,6 @@
 @import "global/popup";
 @import "global/form";
 
-
 @import "blocks/shared/b-footer";
 @import "blocks/shared/b-menu";
 @import "blocks/shared/b-sidebar";
@@ -19,7 +18,6 @@
 @import "blocks/pages/b-about-block";
 @import "blocks/pages/b-council";
 @import "blocks/pages/b-news";
-@import "blocks/pages/b-partners";
 @import "blocks/pages/b-past-year";
 @import "blocks/pages/b-quote";
 @import "blocks/pages/b-success-story";
@@ -29,6 +27,9 @@
 @import "blocks/pages/b-send-work";
 @import "blocks/pages/b-festival-program";
 @import "blocks/pages/b-about-festival";
-
+@import "blocks/pages/b-accreditation";
+@import "blocks/pages/b-partners";
+@import "blocks/pages/b-winners";
+@import "blocks/pages/b-photo-gallery";
 
 @import "overloads/one-page-scroll";

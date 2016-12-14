@@ -1,0 +1,79 @@
+$inputs-margin: vw(16px);
+
+.b-accreditation {
+  padding: vw(50px) vw(75px);
+
+  .headline {
+    margin-bottom: vw(40px);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    .information {
+      flex: 0 0 40%;
+
+      .main-text {
+        margin-bottom: vw(40px);
+        @include font-set(vw(18px), vw(27px), $rubik-light);
+
+        > a { @include  hover-link($c-red); }
+      }
+
+      .text {
+        margin-bottom: vw(20px);
+        @include font-set(vw(15px), vw(22px), $rubik-light);
+        > b {
+          font-weight: $rubik-medium;
+        }
+      }
+    }
+
+    .participation {
+      flex: 0 0 54%;
+    }
+
+    .form {
+      flex: 0 0 48%;
+      padding: vw(28px) vw(40px) vw(40px);
+      border: vw(3px) dashed rgba(#fff, .2);
+
+      .title {
+        margin-bottom: vw(16px);
+        font-family: $play-font;
+        font-style: italic;
+        @include font-set(vw(24px), vw(32px), $play-italic-bold);
+      }
+
+      .input {
+        margin-bottom: $inputs-margin;
+        label {
+          color: rgba(#fff, .6);
+        }
+      }
+
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: vw(-10px);
+        margin-bottom: $inputs-margin;
+
+        .left-column { margin-right: 3%; }
+        .g-checkbox {
+          margin-top: vw(10px);
+        }
+      }
+
+      &__bottom {
+        display: flex;
+        align-items: center;
+        margin-top: vw(25px);
+
+        .note-require {
+          color: rgba(#fff, .5);
+        }
+      }
+    }
+  }
+}
