@@ -68,7 +68,6 @@ $ ->
     url = "http://loremflickr.com/155/#{height}?random=#{count}"
     $('.js-gallery-list').append("<img src=#{url} />")
 
-  insert() for [1..17]
 
 
 
